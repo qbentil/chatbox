@@ -26,15 +26,15 @@ export default {
             borderRadius: 10,
             marginVertical: 10,
             // opacity: 0.3,
-            padding: 5,
+            padding: 3,
             paddingHorizontal: 10,
             // backgroundColor: "#2C3333" //To Managed by Parent Component
         },
         input: {
             flex: 1,
-            paddingVertical: 8,
+            paddingVertical: 6,
             paddingLeft: 10,
-            color: Colors.dark.text,
+            // color: Colors.dark.text, //Handle by parent
             fontSize: 17,
             fontWeight: '400',
         },

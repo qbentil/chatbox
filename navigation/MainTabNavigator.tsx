@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import { ColorSchemeName, Pressable, StyleSheet, Text, View } from 'react-native';
 import { Fontisto, Ionicons, SimpleLineIcons, Zocial } from '@expo/vector-icons';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 
@@ -13,10 +12,6 @@ import StatusScreen from '../screens/StatusScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import useColorScheme from '../hooks/useColorScheme';
-
-// import { createStackNavigator } from '@react-navigation/stack';
-
-
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
   
@@ -43,6 +38,7 @@ export default function BottomTabNavigator() {
           component={CallsScreen}
           options={{
             title: 'Calls',
+            tabBarBadge: 2,
             tabBarIcon: ({ color }) => <Ionicons size={25} style={{ marginBottom: -3 }} name="md-call-outline" color={color} />,
           }}
         />
@@ -68,6 +64,7 @@ export default function BottomTabNavigator() {
           component={SettingsScreen}
           options={{
             title: 'Settings',
+            // tabBarBadge: 1,
             tabBarIcon: ({ color }) => <SimpleLineIcons size={30} style={{ marginBottom: -3 }} name="settings" color={color} />,
           }}
         />
@@ -94,28 +91,27 @@ const SettingStack = createStackNavigator<RootStackParamList>();
 const StatusStack= createStackNavigator<RootStackParamList>();
 const CallsStack = createStackNavigator<RootStackParamList>();
 
-function CameraScreenNavigator() {
-  return (
-    <CameraStack.Navigator>
-      <CameraStack.Screen
-        name="Camera"
-        component={CameraScreen}
-        options={{ headerTitle: 'Tab One Title' }}
-      />
-    </CameraStack.Navigator>
-  );
-}
+// function CameraScreenNavigator() {
+//   return (
+//     <CameraStack.Navigator>
+//       <CameraStack.Screen
+//         name="Camera"
+//         component={CameraScreen}
+//         options={{ headerTitle: 'Tab One Title' }}
+//       />
+//     </CameraStack.Navigator>
+//   );
+// }
 
-// const TabTwoStack = createStackNavigator<RootStackParamList>();
 
-function ChatScreenNavigator() {
-  return (
-    <ChatStack.Navigator>
-      <ChatStack.Screen
-        name="Chats"
-        component={ChatScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
-      />
-    </ChatStack.Navigator>
-  );
-}
+// function ChatScreenNavigator() {
+//   return (
+//     <ChatStack.Navigator>
+//       <ChatStack.Screen
+//         name="Chats"
+//         component={ChatScreen}
+//         options={{ headerTitle: 'Tab Two Title' }}
+//       />
+//     </ChatStack.Navigator>
+//   );
+// }

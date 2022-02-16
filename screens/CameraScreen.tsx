@@ -7,9 +7,7 @@ import { StyleSheet } from 'react-native';
 export default function CameraScreen({ navigation }: RootTabScreenProps<'Camera'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Chats</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <Text style={styles.title}>Camera Tab</Text>
     </View>
   );
 }

@@ -1,5 +1,9 @@
-import Colors from './Colors';
+// import { ColorSchemeName } from 'react-native';
 
+import Colors from './Colors';
+import useColorScheme from '../hooks/useColorScheme';
+
+// const colorScheme = useColorScheme();
 export default {
     headerTitle: {
         color: Colors.light.tint,
@@ -12,4 +16,28 @@ export default {
         justifyContent: 'space-between', 
         marginRight: 10
     },
+    // searchbar
+    searchBar: {
+        container: {
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 10,
+            marginVertical: 10,
+            // opacity: 0.3,
+            padding: 5,
+            paddingHorizontal: 10,
+            // backgroundColor: "#2C3333"
+        },
+        input: {
+            flex: 1,
+            paddingVertical: 8,
+            paddingLeft: 10,
+            color: Colors.dark.text,
+            fontSize: 17,
+            fontWeight: '400',
+        },
+        iconColor:Colors.dark.text,
+    }
 }

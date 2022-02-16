@@ -9,17 +9,17 @@ import { MonoText } from './StyledText';
 import Styles from '../constants/Styles';
 import useColorScheme from '../hooks/useColorScheme';
 
-export default function SearchBar({ path }) {
+export default function SearchBar({ path }: { path: string }) {
     const colorScheme = useColorScheme();
     return (
         <View style={[Styles.searchBar.container, {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
-        <Ionicons name='search' size={25} color = {Styles.searchBar.iconColor}/>
+        <Ionicons name='search' size={25} color = {Colors[colorScheme].tabIconDefault} />
         <TextInput
             style={Styles.searchBar.input}
             placeholder={path}
             onChangeText={(searchString) => {console.log(searchString)}}
             underlineColorAndroid="transparent"
-            placeholderTextColor={Styles.searchBar.input.color}
+            placeholderTextColor={Colors[colorScheme].tabIconDefault}
         />
     </View>
     );

@@ -1,36 +1,35 @@
+import { ScrollView, StyleSheet, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
 
+import Colors from '../constants/Colors';
 import EditScreenInfo from '../components/EditScreenInfo';
+import { Ionicons } from '@expo/vector-icons';
 import { RootTabScreenProps } from '../types';
-import { StyleSheet } from 'react-native';
+import SearchBar from '../components/SearchBar';
+import useColorScheme from '../hooks/useColorScheme';
 
 export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) {
+  const colorScheme = useColorScheme();
+  
   return (
-    <View style={styles.container}>
-      <View style = {styles.titleContainer}>
+    <ScrollView style={[styles.container, {backgroundColor: Colors[colorScheme].background}]}>
         <Text style = {styles.title}>WA Business</Text>
-      </View>
       {/* <EditScreenInfo path="/screens/TabOneScreen.tsx" /> */}
-    </View>
+
+    {/* Import SearchBar */}
+    <SearchBar path={"Search"} />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  titleContainer: {
-    flexDirection: 'row',
+    paddingHorizontal: 20
   },
   title: {
-    fontSize: 40,
+    fontSize: 35,
     fontWeight: '600',
+    
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+
 });

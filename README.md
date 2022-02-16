@@ -1,5 +1,5 @@
 # chatbox
-ChatBox is a WhatsApp Clone that built with React Native &amp; Expo
+ChatBox is a WhatsApp Business Clone that built with React Native &amp; Expo
 
 ## Tech Stack used:
 **FRONTEND**

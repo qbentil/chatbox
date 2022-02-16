@@ -28,7 +28,7 @@ export default {
             // opacity: 0.3,
             padding: 5,
             paddingHorizontal: 10,
-            // backgroundColor: "#2C3333"
+            // backgroundColor: "#2C3333" //To Managed by Parent Component
         },
         input: {
             flex: 1,
@@ -38,6 +38,6 @@ export default {
             fontSize: 17,
             fontWeight: '400',
         },
-        iconColor:Colors.dark.text,
+        
     }
 }

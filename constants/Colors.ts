@@ -9,7 +9,7 @@ export default {
     tint: tintColorLight,
     tabIconDefault: '#ccc',
     tabIconSelected: tintColorLight,
-    backgroundOpac: '#ccc'
+    backgroundOpac: '#EEEEEE'
   },
   dark: {
     text: '#fff',

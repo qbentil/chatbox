@@ -1,6 +1,7 @@
 import { ScrollView, StyleSheet, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
 
+import ChatNavs from '../components/ChatNavs';
 import Colors from '../constants/Colors';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Ionicons } from '@expo/vector-icons';
@@ -13,11 +14,9 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
   
   return (
     <ScrollView style={[styles.container, {backgroundColor: Colors[colorScheme].background}]}>
-        <Text style = {styles.title}>WA Business</Text>
-      {/* <EditScreenInfo path="/screens/TabOneScreen.tsx" /> */}
-
-    {/* Import SearchBar */}
-    <SearchBar path={"Search"} />
+      <Text style = {styles.title}>WA Business</Text>
+      <SearchBar />
+      <ChatNavs />
     </ScrollView>
   );
 }

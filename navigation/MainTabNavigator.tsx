@@ -14,6 +14,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import useColorScheme from '../hooks/useColorScheme';
 
+// import { createStackNavigator } from '@react-navigation/stack';
+
+
+
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
   
 export default function BottomTabNavigator() {
@@ -22,7 +26,6 @@ export default function BottomTabNavigator() {
     return (
       <BottomTab.Navigator
         initialRouteName="Chats"
-        
         screenOptions={{
           tabBarActiveTintColor: Colors.light.tint,
           headerShown: false,
@@ -80,7 +83,7 @@ export default function BottomTabNavigator() {
     name: React.ComponentProps<typeof Ionicons>['name'];
     color: string;
   }) {
-    return <props.type size={30} style={{ marginBottom: -3 }} {...props} />;
+    return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
   }
 
 // Each tab has its own navigation stack, you can read more about this pattern here:

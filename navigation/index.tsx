@@ -14,11 +14,9 @@ import Colors from '../constants/Colors';
  */
 import LinkingConfiguration from './LinkingConfiguration';
 import ModalScreen from '../screens/ModalScreen';
+import NewGroupModalScreen from '../screens/NewGroupModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import Styles from '../constants/Styles';
-import TabOneScreen from '../screens/ChatScreen';
-import TabTwoScreen from '../screens/SettingsScreen';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import useColorScheme from '../hooks/useColorScheme';
 
@@ -55,7 +53,6 @@ function RootNavigator() {
     >
       <Stack.Screen 
         name="Root" 
-        
         component={BottomTabNavigator} 
         options={({ navigation }) => ({ 
           title: "",
@@ -79,24 +76,14 @@ function RootNavigator() {
           })} 
       />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+
+        {/* Modal Screens */}
         <Stack.Group screenOptions={{ presentation: 'modal' }}>
           <Stack.Screen name="Modal" component={ModalScreen} />
+        </Stack.Group>
+        <Stack.Group screenOptions={{ presentation: 'modal' }}>
+          <Stack.Screen name="NewGroupModal" component={NewGroupModalScreen} />
         </Stack.Group>
     </Stack.Navigator>
   );
 }
-
-
-const styles = StyleSheet.create({
-  headerTitle: {
-    color: Colors.light.background,
-    fontWeight: 'bold', 
-    fontSize: 21
-  },
-  headerIconsContainer: {
-      flexDirection: 'row', 
-      width: 56, 
-      justifyContent: 'space-between', 
-      marginRight: 10
-  },
-})

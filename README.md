@@ -6,7 +6,8 @@ ChatBox is a WhatsApp Business Clone that built with React Native &amp; Expo
 1. React Native
 2. Expo
 3. TypeScript
-4. React Navigation 
+4. React Navigation
+5. Tailwind React native Classname
 
 **BACKEND**
 1. AWS Amplify

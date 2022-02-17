@@ -1,4 +1,5 @@
-export default [{
+export default [
+  {
     id: '1',
     users: [{
       id: 'u1',
@@ -14,7 +15,8 @@ export default [{
       content: 'Well done this sprint, guys!',
       createdAt: '2020-10-03T14:48:00.000Z',
     }
-  }, {
+  },
+  {
     id: '2',
     users: [{
       id: 'u1',
@@ -30,7 +32,8 @@ export default [{
       content: 'How are you doing?',
       createdAt: '2020-10-02T15:40:00.000Z',
     }
-  }, {
+  },
+  {
     id: '3',
     users: [{
       id: 'u1',
@@ -46,7 +49,8 @@ export default [{
       content: 'Hi, Vadim.',
       createdAt: '2020-10-02T14:48:00.000Z',
     }
-  }, {
+  },
+  {
     id: '4',
     users: [{
       id: 'u1',
@@ -62,7 +66,8 @@ export default [{
       content: 'Can you review my last merge',
       createdAt: '2020-09-29T14:48:00.000Z',
     }
-  }, {
+  }, 
+  {
     id: '5',
     users: [{
       id: 'u1',
@@ -78,7 +83,8 @@ export default [{
       content: 'I would be happy',
       createdAt: '2020-09-30T14:48:00.000Z',
     }
-  }, {
+  }, 
+  {
     id: '6',
     users: [{
       id: 'u1',
@@ -94,7 +100,8 @@ export default [{
       content: 'I have a solution',
       createdAt: '2020-10-02T15:40:00.000Z',
     }
-  }, {
+  }, 
+  {
     id: '7',
     users: [{
       id: 'u1',
@@ -110,7 +117,8 @@ export default [{
       content: 'How are you doing?',
       createdAt: '2020-10-02T15:40:00.000Z',
     }
-  }, {
+  }, 
+  {
     id: '8',
     users: [{
       id: 'u1',
@@ -126,7 +134,8 @@ export default [{
       content: 'Dear, did you eat?',
       createdAt: '2020-09-27T15:40:00.000Z',
     }
-  }, {
+  }, 
+  {
     id: '9',
     users: [{
       id: 'u1',
@@ -142,4 +151,5 @@ export default [{
       content: 'Meet me at the same place',
       createdAt: '2020-09-25T15:40:00.000Z',
     },
-  }]
+  }
+]

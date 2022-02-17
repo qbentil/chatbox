@@ -43,14 +43,13 @@ export type ChatRoom = {
 export type user = {
   id: String;
   name: String;
-  phone: String;
-  imageUrl: String;
+  imageUri: String;
 }
 
 export type Message = {
   id: String;
   content: string;
-  createdAt: number;
+  createdAt: string;
 }
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,

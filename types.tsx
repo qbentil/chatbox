@@ -44,7 +44,7 @@ export type user = {
   id: String;
   name: String;
   phone: String;
-  imageUrl: String;
+  imageUri: String;
 }
 
 export type Message = {

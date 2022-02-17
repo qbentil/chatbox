@@ -3,6 +3,7 @@ import { Text, View } from '../components/Themed';
 
 import ChatListItem from '../components/chatListItem/ChatListItem';
 import ChatNavs from '../components/ChatNavs';
+import ChatRooms from '../data/ChatRooms';
 import Colors from '../constants/Colors';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Ionicons } from '@expo/vector-icons';
@@ -19,7 +20,7 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
       <Text style = {[styles.title]}>WA Business</Text>
       <SearchBar />
       <ChatNavs />
-      <ChatListItem />
+      <ChatListItem chatRoom = {ChatRooms[5]} />
     </View>
   );
 }
@@ -27,6 +28,7 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
+    minHeight: 800
   },
   title: {
     fontSize: 35,

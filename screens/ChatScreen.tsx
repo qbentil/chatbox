@@ -29,6 +29,7 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
           scrollEventThrottle = {1}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
+          nestedScrollEnabled
         >
            {!titleShown?  <Text style = {[styles.title]}>WA Business</Text>: null}
             <SearchBar />

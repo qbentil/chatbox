@@ -1,8 +1,8 @@
+import { Feather, Ionicons } from '@expo/vector-icons';
 import { Pressable, SafeAreaView, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
-import { Feather } from '@expo/vector-icons';
 import Styles from '../constants/Styles';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
@@ -12,23 +12,24 @@ const  ChatScreenHeader = (props) => {
     colorScheme = useColorScheme()
     const navigation = useNavigation()
   return (
-    <SafeAreaView >
-      <View style={[tw`mx-2 flex-row justify-between my-2`, props.showTitle? styles.bgTransparent: null]}>
-      <Text style = {Styles.headerTitle} >Edit</Text>
-        {props.showTitle? <Text style={tw`font-semibold text-lg`}>WA Businnes</Text>: null}
-        <Pressable
+    <SafeAreaView style={[tw`border-b mb-2`, {borderBottomColor: Colors[colorScheme].backgroundOpac}]}>
+      <View style={tw`mx-2 flex-row justify-between my-2`}>
+      <Pressable
             style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
             })}
-            onPress={() => navigation.navigate('Modal')}
+            onPress={() => navigation.navigate("Chats")}
         >
-            <Feather
-                name="edit" 
-                size={22}
+            <Ionicons
+                name="chevron-back-sharp" 
+                size={30}
                 color={Colors.light.tint}
-                style={{fontWeight: 'bold'}}
+                style={tw`font-bold`}
             />
         </Pressable>
+        <Text style={tw`font-semibold text-lg`}>Labels</Text>
+        <Text style={tw`mx-5 font-semibold text-lg`}></Text>
+        
       </View>
     </SafeAreaView>
   );

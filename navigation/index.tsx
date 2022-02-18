@@ -7,6 +7,7 @@ import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../typ
 
 import BottomTabNavigator from './MainTabNavigator';
 import Colors from '../constants/Colors';
+import LabelsScreen from '../screens/LabelsScreen';
 import LinkingConfiguration from './LinkingConfiguration';
 import ModalScreen from '../screens/ModalScreen';
 import NewGroupModalScreen from '../screens/NewGroupModalScreen';
@@ -29,6 +30,7 @@ import useColorScheme from '../hooks/useColorScheme';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+  
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
@@ -86,6 +88,7 @@ function RootNavigator() {
           })} 
       />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+        <Stack.Screen name="LabelsScreen" component={LabelsScreen} options={{ title: 'Labels!', headerShown: false }} />
 
         {/* Modal Screens */}
         <Stack.Group screenOptions={{ presentation: 'modal' }}>

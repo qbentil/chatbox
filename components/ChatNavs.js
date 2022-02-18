@@ -26,7 +26,10 @@ const ChatNavs = () => {
         </TouchableOpacity>
       </View>
       <View style = {tw`mb-2 border-gray-200 border-opacity-30 border-b`}>
-        <TouchableOpacity  style={tw`flex-row justify-between p-1 pt-0 pl-0`}>
+        <TouchableOpacity
+          style={tw`flex-row justify-between p-1 pt-0 pl-0`}
+          onPress = {() => navigation.navigate("LabelsScreen")}
+          >
           <View style={tw`flex-row justify-between`}>
             <View style={[tw`mr-2 p-2 bg-gray-100 rounded-full`, , {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
                 <MaterialCommunityIcons name='label' size={17} color = {Colors.light.tint} />

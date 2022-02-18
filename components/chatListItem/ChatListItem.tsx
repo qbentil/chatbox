@@ -12,8 +12,8 @@ import useColorScheme from '../../hooks/useColorScheme';
 export type ChatListItemProp = {
     chatRoom: ChatRoom;
 }
-const ChatListItem = (chatRoom: ChatRoom) => {
-    // const {chatRoom} = props
+const ChatListItem = (props: ChatRoom) => {
+    const { chatRoom } = props;
     
     return (
         <View style={Style.container}>

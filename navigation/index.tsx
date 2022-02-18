@@ -64,6 +64,7 @@ function RootNavigator() {
         name="Root" 
         component={BottomTabNavigator} 
         options={({ navigation }) => ({ 
+          headerShown: false,
           title: "",
           headerLeft: () => (
             <Text style = {Styles.headerTitle} >Edit</Text>

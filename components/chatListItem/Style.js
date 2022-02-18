@@ -10,9 +10,9 @@ const Style = StyleSheet.create({
   lefContainer: {
     flexDirection: 'row',
   },
-  midContainer: {
-    justifyContent: 'space-around'
-  },
+//   midContainer: {
+//     justifyContent: 'space-around'
+//   },
   avatar: {
     width: 60,
     height: 60,
@@ -23,17 +23,14 @@ const Style = StyleSheet.create({
   username: {
     fontWeight: 'bold',
     fontSize: 16,
-    marginTop: -10
   },
   lastMessage: {
     fontSize: 16,
     color: 'grey',
-    marginTop: -15
   },
   time: {
     fontSize: 14,
     color: 'grey',
-    marginTop: 6
   },
 });
 

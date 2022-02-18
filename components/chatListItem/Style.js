@@ -10,9 +10,6 @@ const Style = StyleSheet.create({
   lefContainer: {
     flexDirection: 'row',
   },
-//   midContainer: {
-//     justifyContent: 'space-around'
-//   },
   avatar: {
     width: 60,
     height: 60,

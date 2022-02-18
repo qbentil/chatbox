@@ -1,32 +1,30 @@
-import { FlatList, Image, TextInput, TouchableOpacity } from 'react-native';
 import { Text, View } from '../Themed';
 
 import { ChatRoom } from '../../types';
-import Colors from '../../constants/Colors';
-import { Ionicons } from '@expo/vector-icons';
+import { Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Style from './Style';
+import moment from 'moment';
 import tw from 'twrnc'
-import useColorScheme from '../../hooks/useColorScheme';
 
 export type ChatListItemProp = {
     chatRoom: ChatRoom;
 }
 const ChatListItem = (props: ChatRoom) => {
     const { chatRoom } = props;
-    
+    const user = chatRoom.users[1];
     return (
-        <View style={Style.container}>
+        <TouchableOpacity style={Style.container}>
         <View style={Style.lefContainer}>
           <Image 
             source={{ 
-                uri: 'https://codersquiz.netlify.app/img/bentil.jpeg'
+                uri: user.imageUri
             }} 
             style={Style.avatar}
         />
 
-          <View style={Style.midContainer}>
-            <Text style={Style.username}>{chatRoom.users[0].name}</Text>
+          <View style={{}}>
+            <Text style={Style.username}>{user.name}</Text>
             <Text
               numberOfLines={2}
               style={Style.lastMessage}
@@ -37,9 +35,9 @@ const ChatListItem = (props: ChatRoom) => {
         </View>
 
         <Text style={Style.time}>
-          {'yesterday'}
+          {moment(chatRoom.lastMessage.createdAt).format("DD/MM/YYYY")}
         </Text>
-      </View>
+      </TouchableOpacity>
     )
 }
 // moment(chatRoom.lastMessage.createdAt).format("DD/MM/YYYY")

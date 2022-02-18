@@ -41,13 +41,13 @@ export type ChatRoom = {
 }
 
 export type user = {
-  id: String;
-  name: String;
-  imageUri: String;
+  id: string;
+  name: string;
+  imageUri: string;
 }
 
 export type Message = {
-  id: String;
+  id: string;
   content: string;
   createdAt: string;
 }

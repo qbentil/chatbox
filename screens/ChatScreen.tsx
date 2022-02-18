@@ -30,7 +30,7 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
         >
-            <Text style = {[styles.title]}>WA Business</Text>
+           {!titleShown?  <Text style = {[styles.title]}>WA Business</Text>: null}
             <SearchBar />
             <ChatNavs />
             <ChatList />

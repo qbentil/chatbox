@@ -19,7 +19,7 @@ const  ChatScreenHeader = (props) => {
             style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
             })}
-            onPress={() => navigation.navigate('Modal')}
+            onPress={() => navigation.navigate('Modal');}
         >
             <Feather
                 name="edit" 

@@ -1,12 +1,16 @@
+import {FlatList, ScrollView} from 'react-native';
+
 import ChatListItem from './chatListItem/ChatListItem';
 import ChatRooms from '../data/ChatRooms';
-import {FlatList} from 'react-native';
 
 const ChatList = () => {
 
     return (
+
         <FlatList 
+            nestedScrollEnabled
             data={ChatRooms}
+            style={{width: "100%"}}
             keyExtractor = {(item) => item.id}
             renderItem = {({item}) => (
                <ChatListItem chatRoom = {item} /> 

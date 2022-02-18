@@ -19,6 +19,7 @@ export type RootStackParamList = {
   NewGroupModal: undefined;
   Modal: undefined;
   NotFound: undefined;
+  LabelsScreen: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -51,6 +52,14 @@ export type Message = {
   content: string;
   createdAt: string;
 }
+
+export type Label = {
+  id: string;
+  title: string;
+  color: string;
+  users: user[]
+}
+
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>

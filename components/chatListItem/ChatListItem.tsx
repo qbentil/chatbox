@@ -25,10 +25,7 @@ const ChatListItem = (props: ChatListItemProp) => {
 
           <View style={{}}>
             <Text style={Style.username}>{user.name}</Text>
-            <Text
-              numberOfLines={2}
-              style={Style.lastMessage}
-              >{chatRoom.lastMessage.content}
+            <Text numberOfLines={2} ellipsizeMode = {'tail'} style={Style.lastMessage}>{chatRoom.lastMessage.content}
             </Text>
           </View>
 

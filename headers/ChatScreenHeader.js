@@ -2,7 +2,6 @@ import { Pressable, SafeAreaView, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Feather } from '@expo/vector-icons';
 import Styles from '../constants/Styles';
 import tw from 'twrnc'
@@ -19,7 +18,7 @@ const  ChatScreenHeader = (props) => {
             style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
             })}
-            onPress={() => navigation.navigate('Modal');}
+            onPress={() => navigation.navigate('Modal')}
         >
             <Feather
                 name="edit" 

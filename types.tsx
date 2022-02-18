@@ -36,7 +36,7 @@ export type RootTabParamList = {
 
 export type ChatRoom = {
   id: string;
-  users: [user];
+  users: user[];
   lastMessage: Message;
 }
 

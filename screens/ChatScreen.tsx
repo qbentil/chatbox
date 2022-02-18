@@ -1,11 +1,11 @@
 import { ScrollView, StyleSheet, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
 
+import ChatList from '../components/ChatList';
 import ChatListItem from '../components/chatListItem/ChatListItem';
 import ChatNavs from '../components/ChatNavs';
 import ChatRooms from '../data/ChatRooms';
 import Colors from '../constants/Colors';
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Ionicons } from '@expo/vector-icons';
 import { RootTabScreenProps } from '../types';
 import SearchBar from '../components/searchBar/SearchBar';
@@ -20,7 +20,8 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
       <Text style = {[styles.title]}>WA Business</Text>
       <SearchBar />
       <ChatNavs />
-      <ChatListItem chatRoom = {ChatRooms[5]} />
+      <ChatList />
+      {/*  <ChatListItem chatRoom = {ChatRooms[2]} /> */}
     </View>
   );
 }

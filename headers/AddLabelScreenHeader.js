@@ -1,5 +1,5 @@
 import { Feather, Ionicons } from '@expo/vector-icons';
-import { Pressable, SafeAreaView, StyleSheet } from 'react-native';
+import { Pressable, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
@@ -7,7 +7,7 @@ import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 import { useNavigation } from '@react-navigation/native';
 
-const  LabelsScreenHeader = (props) => {
+const  AddLabelScreenHeader = (props) => {
     colorScheme = useColorScheme()
     const navigation = useNavigation()
   return (
@@ -19,15 +19,12 @@ const  LabelsScreenHeader = (props) => {
             })}
             onPress={() => navigation.goBack()}
         >
-            <Ionicons
-                name="chevron-back-sharp" 
-                size={30}
-                color={Colors.light.tint}
-                style={tw`font-bold`}
-            />
+          <Text style={[tw`text-lg`,{color: Colors.light.tint}]}>Cancel</Text>
         </Pressable>
-        <Text style={tw`font-semibold text-lg`}>Labels</Text>
-        <Text style={tw`mx-5 font-semibold text-lg`}></Text>
+        <Text style={tw`font-semibold text-lg`}>Add New Label</Text>
+        <TouchableOpacity activeOpacity={.7} disabled={props.enableSave? false: true}>
+          <Text style={[tw`text-lg`, {color: props.enableSave? 'white': 'grey'}]}>Save</Text>
+        </TouchableOpacity>
         
       </View>
     </SafeAreaView>
@@ -42,4 +39,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default LabelsScreenHeader;
+export default AddLabelScreenHeader;

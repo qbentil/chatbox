@@ -2,25 +2,19 @@ import { ScrollView, StyleSheet, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
-import LabelList from '../components/LabelList';
-import LabelsScreenHeader from '../headers/LabelsScreenHeader'
 import { RootTabScreenProps } from '../types';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
+import AddLabelScreenHeader from '../headers/AddLabelScreenHeader';
+import AddLabel from '../components/addLabel';
 
-export default function LabelsScreen({ navigation }: RootTabScreenProps<'Labels'>) {
+export default function AddLabelsScreen({ navigation }: RootTabScreenProps<'AddLabel'>) {
   const colorScheme = useColorScheme();
   
   return (
     <View style={[styles.container, {backgroundColor: Colors[colorScheme].background}]}>
-        <LabelsScreenHeader  />
-        <ScrollView  
-          nestedScrollEnabled
-          showsVerticalScrollIndicator={false}
-          showsHorizontalScrollIndicator={false}
-        >
-        <LabelList />
-        </ScrollView>
+        <AddLabelScreenHeader enableSave = {false}  />
+        <AddLabel />
     </View>
   );
 }

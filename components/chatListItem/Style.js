@@ -4,7 +4,7 @@ const Style = StyleSheet.create({
   container: {
     flexDirection: 'row',
     width: "100%",
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     padding: 10,
   },
   lefContainer: {

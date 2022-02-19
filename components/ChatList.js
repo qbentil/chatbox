@@ -15,6 +15,7 @@ const ChatList = () => {
             renderItem = {({item}) => (
                <ChatListItem chatRoom = {item} /> 
             )}
+            
         />
 
     );

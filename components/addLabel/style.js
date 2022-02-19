@@ -4,9 +4,17 @@ export const style = StyleSheet.create({
         
     },
     colorPicker: {
-        width: 40,
-        height: 40,
+        width: 60,
+        height: 60,
         borderRadius: 50,
-        backgroundColor: 'gray'
+        backgroundColor: 'pink'
+    },
+    input:{
+        // borderColor: 'gray',
+        fontSize: 18
+        
+    },
+    text:{
+        fontSize: 18
     }
 })

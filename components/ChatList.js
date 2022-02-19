@@ -1,6 +1,6 @@
 import {FlatList, ScrollView} from 'react-native';
 
-import ChatListItem from './chatListItem/ChatListItem';
+import ChatListItem from './chatListItem';
 import ChatRooms from '../data/ChatRooms';
 
 const ChatList = () => {

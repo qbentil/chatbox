@@ -13,7 +13,7 @@ const ChatNavs = () => {
   return (
     <View style={tw`pl-2 pr-2`}>
       <View style = {tw`mb-2 border-gray-200 border-opacity-30 border-b`}>
-        <TouchableOpacity 
+        <TouchableOpacity activeOpacity = {.7} 
           style={tw`flex-row justify-between p-1 pt-0 pl-0 `}
         >
           <View style={tw`flex-row justify-between`}>
@@ -26,7 +26,7 @@ const ChatNavs = () => {
         </TouchableOpacity>
       </View>
       <View style = {tw`mb-2 border-gray-200 border-opacity-30 border-b`}>
-        <TouchableOpacity
+        <TouchableOpacity activeOpacity = {.7}
           style={tw`flex-row justify-between p-1 pt-0 pl-0`}
           onPress = {() => navigation.navigate("LabelsScreen")}
           >
@@ -39,10 +39,10 @@ const ChatNavs = () => {
         </TouchableOpacity>
       </View>
       <View  style={tw`flex-row justify-between mb-2 p-1 pt-0 pl-0 border-gray-200 border-opacity-30 border-b`}>
-        <TouchableOpacity>
+        <TouchableOpacity activeOpacity = {.7}>
           <Text style={[tw`text-lg`, {color: Colors.light.tint}]}>Broadcast Lists</Text>
         </TouchableOpacity>
-        <TouchableOpacity
+        <TouchableOpacity activeOpacity = {.7}
             onPress={() => navigation.navigate('NewGroupModal')}
         >
           <Text style={[tw`text-lg`, {color: Colors.light.tint}]}>New Group</Text>

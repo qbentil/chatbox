@@ -13,7 +13,7 @@ export type LabelListItemProp = {
 const LabelListItem = (props: LabelListItemProp) => {
     const { label } = props;
     return (
-        <TouchableOpacity style={tw`flex-row justify-between mx-2 my-1`}>
+        <TouchableOpacity activeOpacity = {.7} style={tw`flex-row justify-between mx-2 my-1`}>
           <View style={tw`flex-row justify-between mx-2`}>
             <MaterialCommunityIcons name='label' size={30} color = {label.color} style={tw`mr-2`} />
             <Text style = {[tw`text-lg font-bold`, styles.text]}>{label.title}</Text>

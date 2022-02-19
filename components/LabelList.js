@@ -25,7 +25,7 @@ const LabelList = () => {
             />
             {/* add Label button */}
             <View style={[tw` ml-5 my-1 py-1 border-b border-t`, {borderColor: Colors[colorScheme].backgroundOpac}]}>
-                <TouchableOpacity activeOpacity = {.7} onPress={() => alert("Add Label")}>
+                <TouchableOpacity activeOpacity = {.7} onPress={() => alert("TODO")}>
                         <Text style = {[tw`text-lg `, {color: Colors.light.tint}]}>Add New Label</Text>
                 </TouchableOpacity>
             </View>

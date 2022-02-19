@@ -6,8 +6,10 @@ import { View, Text } from './Themed';
 import tw from 'twrnc'
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+import { useNavigation } from '@react-navigation/native';
 const LabelList = () => {
     const colorScheme = useColorScheme()
+    const navigation = useNavigation()
     return (
 
         <View>
@@ -25,7 +27,7 @@ const LabelList = () => {
             />
             {/* add Label button */}
             <View style={[tw` ml-5 my-1 py-1 border-b border-t`, {borderColor: Colors[colorScheme].backgroundOpac}]}>
-                <TouchableOpacity activeOpacity = {.7} onPress={() => alert("TODO")}>
+                <TouchableOpacity activeOpacity = {.7} onPress={() => navigation.navigate("AddLabel")}>
                         <Text style = {[tw`text-lg `, {color: Colors.light.tint}]}>Add New Label</Text>
                 </TouchableOpacity>
             </View>

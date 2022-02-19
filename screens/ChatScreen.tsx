@@ -1,18 +1,14 @@
 import { ScrollView, StyleSheet, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
-
-import ChatList from '../components/ChatList';
-import ChatListItem from '../components/chatListItem/ChatListItem';
 import ChatNavs from '../components/ChatNavs';
-import ChatRooms from '../data/ChatRooms';
 import ChatScreenHeader from '../headers/ChatScreenHeader';
 import Colors from '../constants/Colors';
-import { Ionicons } from '@expo/vector-icons';
 import { RootTabScreenProps } from '../types';
 import SearchBar from '../components/searchBar/SearchBar';
-import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 import { useState } from 'react';
+
+import ChatList from '../components/ChatList';
 
 export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) {
   const colorScheme = useColorScheme();
@@ -35,7 +31,6 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
             <SearchBar />
             <ChatNavs />
             <ChatList />
-          {/*  <ChatListItem chatRoom = {ChatRooms[2]} /> */}
         </ScrollView>
     </View>
   );

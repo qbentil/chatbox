@@ -15,6 +15,7 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import Styles from '../constants/Styles';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import useColorScheme from '../hooks/useColorScheme';
+import AddLabelsScreen from '../screens/AddLabelScreen';
 
 /**
  * If you are not familiar with React Navigation, refer to the "Fundamentals" guide:
@@ -89,6 +90,7 @@ function RootNavigator() {
       />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
         <Stack.Screen name="LabelsScreen" component={LabelsScreen} options={{ title: 'Labels!', headerShown: false }} />
+        <Stack.Screen name="AddLabel" component={AddLabelsScreen} options={{ title: 'Labels!', headerShown: false }} />
 
         {/* Modal Screens */}
         <Stack.Group screenOptions={{ presentation: 'modal' }}>

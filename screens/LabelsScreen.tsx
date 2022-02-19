@@ -8,7 +8,7 @@ import { RootTabScreenProps } from '../types';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 
-export default function LabelsScreen({ navigation }: RootTabScreenProps<'Chats'>) {
+export default function LabelsScreen({ navigation }: RootTabScreenProps<'Labels'>) {
   const colorScheme = useColorScheme();
   
   return (

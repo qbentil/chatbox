@@ -1,4 +1,4 @@
-import {FlatList, ScrollView} from 'react-native';
+import {FlatList} from 'react-native';
 
 import LabelListItem from './labelListItem';
 import Labels from '../data/Labels';
@@ -11,7 +11,7 @@ const LabelList = () => {
     return (
 
         <FlatList 
-            nestedScrollEnabled = {true}
+            scrollEnabled = {false}
             data={Labels}
             style={[tw``,{width: "100%"}]}
             keyExtractor = {(item) => item.id}

@@ -20,6 +20,7 @@ export type RootStackParamList = {
   Modal: undefined;
   NotFound: undefined;
   LabelsScreen: undefined;
+  AddLabel: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -33,6 +34,8 @@ export type RootTabParamList = {
   Settings: undefined;
   Status: undefined;
   Calls: undefined;
+  AddLabel: undefined;
+  Labels: undefined;
 };
 
 export type ChatRoom = {

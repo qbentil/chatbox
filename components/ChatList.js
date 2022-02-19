@@ -8,7 +8,7 @@ const ChatList = () => {
     return (
 
         <FlatList 
-            nestedScrollEnabled = {true}
+            scrollEnabled = {false}
             data={ChatRooms}
             style={{width: "100%"}}
             keyExtractor = {(item) => item.id}

@@ -18,7 +18,7 @@ const  ChatScreenHeader = (props) => {
             style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
             })}
-            onPress={() => navigation.navigate("Chats")}
+            onPress={() => navigation.goBack()}
         >
             <Ionicons
                 name="chevron-back-sharp" 

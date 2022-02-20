@@ -6,6 +6,7 @@ import Colors from '../constants/Colors';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 import { useNavigation } from '@react-navigation/native';
+import GoBack from '../components/GoBack';
 
 const  AddLabelScreenHeader = (props) => {
     colorScheme = useColorScheme()
@@ -13,14 +14,7 @@ const  AddLabelScreenHeader = (props) => {
   return (
     <SafeAreaView style={[tw`border-b mb-2`, {borderBottomColor: Colors[colorScheme].backgroundOpac}]}>
       <View style={tw`mx-2 flex-row justify-between my-2`}>
-      <Pressable
-            style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-            })}
-            onPress={() => navigation.goBack()}
-        >
-          <Text style={[tw`text-lg`,{color: Colors.light.tint}]}>Cancel</Text>
-        </Pressable>
+        <GoBack showIcon = {false} label = {'Cancel'} />
         <Text style={tw`font-semibold text-lg`}>Add New Label</Text>
         <TouchableOpacity activeOpacity={.7} disabled={props.enableSave? false: true}>
           <Text style={[tw`text-lg`, {color: props.enableSave? 'white': 'grey'}]}>Save</Text>

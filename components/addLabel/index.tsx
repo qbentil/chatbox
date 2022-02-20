@@ -12,12 +12,12 @@ const AddLabel = () => {
         <View style = {[tw`border-b`,{borderColor: Colors[colorScheme].backgroundOpac,}]}>
             <View style = {[tw`flex-row py-5 mx-2`,]}>
                 <View style = {[tw`mr-4`,style.colorPicker]}>
-				<ColorPicker
-					thumbSize={40}
-					sliderSize={40}
-					noSnap={true}
+				{/* <ColorPicker
+					thumbSize={10}
+					sliderSize={10}
+					// noSnap={true}
 					row={false}
-				/>
+				/> */}
                 </View>
                 <View style={[tw`flex-row justify-between border-b border-t w-74 `, style.input, {borderColor: Colors[colorScheme].backgroundOpac}]} >
                     <TextInput 

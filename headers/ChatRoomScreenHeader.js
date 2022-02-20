@@ -14,10 +14,13 @@ const  ChatRoomScreenHeader = (props) => {
       <View style={[tw`mx-2 flex-row justify-between my-2`, styles.container]}>
         <View style = {tw`flex-row justify-between`}>
             <GoBack label = {11} style = {tw`mt-1`} />
-            <Image  style = {[tw`ml-6`,styles.avatar]}/>
+            <Image  
+              style = {[tw`ml-6`,styles.avatar]}
+              source = {{uri: props.avatar}}
+            />
             <TouchableOpacity activeOpacity={.7} style = {tw`flex `}>
-                <Text style={[tw`font-semibold`, {fontSize: 17}]}>User Name</Text>
-                <Text style={[tw``, {color: Colors[colorScheme].tabIconDefault, fontSize: 13}]}>last seen</Text>
+                <Text style={[tw`font-semibold`, {fontSize: 17}]}>{props.name}</Text>
+                <Text style={[tw``, {color: Colors[colorScheme].tabIconDefault, fontSize: 13}]}>5 minutes ago</Text>
             </TouchableOpacity>
         </View>
         <View style = {tw`flex-row  justify-between`}>

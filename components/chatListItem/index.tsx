@@ -2,11 +2,11 @@ import { Image, TouchableOpacity } from 'react-native';
 import { Text, View } from '../Themed';
 
 import { ChatRoom } from '../../types';
+import Colors from '../../constants/Colors';
 import React from 'react';
 import Style from './Style';
 import moment from 'moment';
 import tw from 'twrnc'
-import Colors from '../../constants/Colors';
 import useColorScheme from '../../hooks/useColorScheme';
 import { useNavigation } from '@react-navigation/native';
 
@@ -19,7 +19,11 @@ const ChatListItem = (props: ChatListItemProp) => {
     const user = chatRoom.users[1];
     const colorScheme = useColorScheme()
     const onClick = () => {
-      navigation.navigate("ChatRoom", {id: chatRoom.id})
+      navigation.navigate("ChatRoom", {
+        id: chatRoom.id,
+        name: user.name,
+        imageUri: user.imageUri
+      })
     }
 
     return (

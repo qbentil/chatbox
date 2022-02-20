@@ -1,14 +1,19 @@
 import * as React from 'react'
-import { SafeAreaView } from 'react-native'
+
 import {Text, View} from '../components/Themed'
-import { useRoute } from '@react-navigation/native'
+
 import ChatRoomScreenHeader from '../headers/ChatRoomScreenHeader'
+import { SafeAreaView } from 'react-native'
+import { useRoute } from '@react-navigation/native'
+import { user } from '../types'
+
 const ChatRoomScreen = () => {
     const route = useRoute();
+    const user:user = route.params as user;
     
     return(
         <View>
-            <ChatRoomScreenHeader />
+            <ChatRoomScreenHeader name = {user.name} avatar = {user.imageUri}/>
         </View>
     )
 }

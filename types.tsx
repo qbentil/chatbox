@@ -21,7 +21,11 @@ export type RootStackParamList = {
   NotFound: undefined;
   LabelsScreen: undefined;
   AddLabel: undefined;
-  ChatRoom: {id: string};
+  ChatRoom: {
+    id: string,
+    name: string,
+    imageUri: string
+  };
 
 };
 

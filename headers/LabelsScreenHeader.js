@@ -1,31 +1,17 @@
-import { Feather, Ionicons } from '@expo/vector-icons';
-import { Pressable, SafeAreaView, StyleSheet } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
-import { useNavigation } from '@react-navigation/native';
+import GoBack from '../components/GoBack';
 
 const  LabelsScreenHeader = (props) => {
     colorScheme = useColorScheme()
-    const navigation = useNavigation()
   return (
     <SafeAreaView style={[tw`border-b mb-2`, {borderBottomColor: Colors[colorScheme].backgroundOpac}]}>
       <View style={tw`mx-2 flex-row justify-between my-2`}>
-      <Pressable
-            style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-            })}
-            onPress={() => navigation.goBack()}
-        >
-            <Ionicons
-                name="chevron-back-sharp" 
-                size={30}
-                color={Colors.light.tint}
-                style={tw`font-bold`}
-            />
-        </Pressable>
+        <GoBack count = {0}/>
         <Text style={tw`font-semibold text-lg`}>Labels</Text>
         <Text style={tw`mx-5 font-semibold text-lg`}></Text>
         

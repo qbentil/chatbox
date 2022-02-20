@@ -7,7 +7,8 @@ import tw from 'twrnc'
 import { Text } from "./Themed"
 
 const GoBack = (props) => {
-    const backText = (props.count === undefined || props.count == 0) ? "Back" : props.count
+    const backText = (props.label === undefined || props.label == 0) ? "Back" : props.label
+    const showIcon = (props.showIcon === undefined) ? true: props.showIcon
     const navigation = useNavigation()
     return (
         <TouchableOpacity
@@ -15,12 +16,14 @@ const GoBack = (props) => {
             onPress={() => navigation.goBack()}
             style={[tw`flex-row`, props.style]}
         >
-            <Ionicons
-                name="chevron-back-sharp" 
-                size={30}
-                color={Colors.light.tint}
-                style={tw`font-bold`}
-            />
+            {showIcon && (
+                <Ionicons
+                    name="chevron-back-sharp" 
+                    size={30}
+                    color={Colors.light.tint}
+                    style={tw`font-bold`}
+                />
+            )}
             <Text
                 style={[tw`mt-1`, {fontSize: 18, color:Colors.light.tint }]}
             >{backText}</Text>

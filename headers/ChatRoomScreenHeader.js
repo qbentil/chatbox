@@ -1,11 +1,11 @@
-import { SafeAreaView, StyleSheet , Image, TouchableOpacity} from 'react-native';
+import { Feather, Ionicons } from '@expo/vector-icons';
+import { Image, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
+import GoBack from '../components/GoBack';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
-import GoBack from '../components/GoBack';
-import { Feather, Ionicons } from '@expo/vector-icons';
 
 const  ChatRoomScreenHeader = (props) => {
     colorScheme = useColorScheme()
@@ -28,7 +28,6 @@ const  ChatRoomScreenHeader = (props) => {
                 <Ionicons name='call-outline' size={24} color = {Colors.light.tint} style = {tw`mx-3`} />
             </TouchableOpacity>
         </View>
-        
       </View>
     </SafeAreaView>
   );

@@ -2,7 +2,7 @@
 ChatBox is a WhatsApp Business Clone that built with React Native &amp; Expo
 
 # UI (DARK MODE)
-<div stye = "display: flex; justify-content: space-around">
+<div sty = "display: flex; justify-content: space-around">
 
 </div>
 

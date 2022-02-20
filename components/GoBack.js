@@ -7,7 +7,7 @@ import tw from 'twrnc'
 import { Text } from "./Themed"
 
 const GoBack = (props) => {
-    const backText = (props.label === undefined || props.label == 0) ? "Back" : props.label
+    // const backText = (props.label === undefined || props.label == 0) ? "Back" : props.label
     const showIcon = (props.showIcon === undefined) ? true: props.showIcon
     const navigation = useNavigation()
     return (
@@ -26,7 +26,7 @@ const GoBack = (props) => {
             )}
             <Text
                 style={[tw`mt-1`, {fontSize: 18, color:Colors.light.tint }]}
-            >{backText}</Text>
+            >{props.label}</Text>
         </TouchableOpacity>
     )
 }

@@ -11,7 +11,7 @@ const  LabelsScreenHeader = (props) => {
   return (
     <SafeAreaView style={[tw`border-b mb-2`, {borderBottomColor: Colors[colorScheme].backgroundOpac}]}>
       <View style={tw`mx-2 flex-row justify-between my-2`}>
-        <GoBack label = {0}/>
+        <GoBack label = {'Back'}/>
         <Text style={tw`font-semibold text-lg`}>Labels</Text>
         <Text style={tw`mx-5 font-semibold text-lg`}></Text>
         

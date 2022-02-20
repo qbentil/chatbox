@@ -8,16 +8,22 @@ import moment from 'moment';
 import tw from 'twrnc'
 import Colors from '../../constants/Colors';
 import useColorScheme from '../../hooks/useColorScheme';
+import { useNavigation } from '@react-navigation/native';
 
 export type ChatListItemProp = {
     chatRoom: ChatRoom;
 }
 const ChatListItem = (props: ChatListItemProp) => {
     const { chatRoom } = props;
+    const navigation = useNavigation();
     const user = chatRoom.users[1];
     const colorScheme = useColorScheme()
+    const onClick = () => {
+      navigation.navigate("ChatRoom", {id: chatRoom.id})
+    }
+
     return (
-        <TouchableOpacity activeOpacity = {.7} style={Style.container}>
+        <TouchableOpacity activeOpacity = {.7} onPress = {() => onClick()} style={Style.container}>
           <View>
             <Image 
               source={{ 

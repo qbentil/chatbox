@@ -69,6 +69,10 @@ export type Label = {
   users: user[]
 }
 
+export type chatMessageProps = {
+  message: Message
+}
+
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>

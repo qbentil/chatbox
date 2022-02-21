@@ -1,14 +1,14 @@
 import { ScrollView, StyleSheet, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
+
+import ChatList from '../components/ChatList';
 import ChatNavs from '../components/ChatNavs';
 import ChatScreenHeader from '../headers/ChatScreenHeader';
 import Colors from '../constants/Colors';
 import { RootTabScreenProps } from '../types';
-import SearchBar from '../components/searchBar/SearchBar';
+import SearchBar from '../components/searchBar';
 import useColorScheme from '../hooks/useColorScheme';
 import { useState } from 'react';
-
-import ChatList from '../components/ChatList';
 
 export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) {
   const colorScheme = useColorScheme();

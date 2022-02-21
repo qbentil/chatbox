@@ -5,7 +5,9 @@ import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 
+import AddLabelsScreen from '../screens/AddLabelScreen';
 import BottomTabNavigator from './MainTabNavigator';
+import ChatRoomScreen from '../screens/ChatRoomScreen';
 import Colors from '../constants/Colors';
 import LabelsScreen from '../screens/LabelsScreen';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -15,8 +17,6 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import Styles from '../constants/Styles';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import useColorScheme from '../hooks/useColorScheme';
-import AddLabelsScreen from '../screens/AddLabelScreen';
-import ChatRoomScreen from '../screens/ChatRoomScreen';
 
 /**
  * If you are not familiar with React Navigation, refer to the "Fundamentals" guide:
@@ -97,8 +97,7 @@ function RootNavigator() {
         {/* Modal Screens */}
         <Stack.Group screenOptions={{ presentation: 'modal' }}>
           <Stack.Screen name="Modal" component={ModalScreen} />
-        </Stack.Group>
-        <Stack.Group screenOptions={{ presentation: 'modal' }}>
+          <Stack.Screen name="AddCallModal" component={ModalScreen} />
           <Stack.Screen name="NewGroupModal" component={NewGroupModalScreen} />
         </Stack.Group>
     </Stack.Navigator>

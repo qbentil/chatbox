@@ -24,10 +24,12 @@ const Style = StyleSheet.create({
   lastMessage: {
     fontSize: 16,
     color: 'grey',
+    paddingLeft: 7
   },
   time: {
-    fontSize: 14,
+    fontSize: 16,
     color: 'grey',
+    paddingRight: 5
   },
 });
 

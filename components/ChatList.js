@@ -4,12 +4,12 @@ import ChatListItem from './chatListItem';
 import ChatRooms from '../data/ChatRooms';
 
 const ChatList = () => {
-
+    const SortedChatData = ChatRooms.slice().sort((a, b) => new Date(b.lastMessage.createdAt) - new Date(a.lastMessage.createdAt))
     return (
 
         <FlatList 
             scrollEnabled = {false}
-            data={ChatRooms}
+            data={SortedChatData}
             style={{width: "100%"}}
             keyExtractor = {(item) => item.id}
             renderItem = {({item}) => (

@@ -1,4 +1,4 @@
-# chatbox
+# chatbox (...ongoing)
 ChatBox is a WhatsApp Business Clone that built with React Native &amp; Expo
 
 # UI (DARK MODE)

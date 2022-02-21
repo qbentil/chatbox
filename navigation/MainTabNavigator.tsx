@@ -90,28 +90,3 @@ const ChatStack= createStackNavigator<RootStackParamList>();
 const SettingStack = createStackNavigator<RootStackParamList>();
 const StatusStack= createStackNavigator<RootStackParamList>();
 const CallsStack = createStackNavigator<RootStackParamList>();
-
-// function CameraScreenNavigator() {
-//   return (
-//     <CameraStack.Navigator>
-//       <CameraStack.Screen
-//         name="Camera"
-//         component={CameraScreen}
-//         options={{ headerTitle: 'Tab One Title' }}
-//       />
-//     </CameraStack.Navigator>
-//   );
-// }
-
-
-// function ChatScreenNavigator() {
-//   return (
-//     <ChatStack.Navigator>
-//       <ChatStack.Screen
-//         name="Chats"
-//         component={ChatScreen}
-//         options={{ headerTitle: 'Tab Two Title' }}
-//       />
-//     </ChatStack.Navigator>
-//   );
-// }

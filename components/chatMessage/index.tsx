@@ -5,7 +5,7 @@ import { chatMessageProps } from '../../types';
 const ChatMessage = (props: chatMessageProps) => {
     const {message} = props;
     return (
-        <Text>{message.content}</Text>
+        <Text>{"TODO...........🥰"}</Text>
     )
 }
 

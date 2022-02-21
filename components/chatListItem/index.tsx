@@ -26,6 +26,19 @@ const ChatListItem = (props: ChatListItemProp) => {
       })
     }
 
+    // fix date
+    let date = moment(chatRoom.lastMessage.createdAt).calendar()
+    if(date.split(" ")[0] == "Today")
+    {
+      date = moment(chatRoom.lastMessage.createdAt).format("LT")
+    }else if (date.split(" ")[0] == "Yesterday")
+    {
+      date = date.split(" ")[0]
+    }else if (date.split(" ")[0] == "Last")
+    {
+      date = date.split(" ")[1]
+    }
+
     return (
         <TouchableOpacity activeOpacity = {.7} onPress = {() => onClick()} style={Style.container}>
           <View>
@@ -43,7 +56,7 @@ const ChatListItem = (props: ChatListItemProp) => {
             </View>
             <View>
               <Text style={Style.time}>
-              {moment(chatRoom.lastMessage.createdAt).format("DD/MM/YYYY")}
+              {date}
               </Text>
             </View>
           </View>

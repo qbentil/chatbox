@@ -17,6 +17,7 @@ declare global {
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   NewGroupModal: undefined;
+  AddCallModal: undefined;
   Modal: undefined;
   NotFound: undefined;
   LabelsScreen: undefined;
@@ -48,6 +49,18 @@ export type ChatRoom = {
   id: string;
   users: user[];
   lastMessage: Message;
+}
+
+export type Call = {
+  id: string,
+  mode: string,
+  type: string,
+  user: user,
+  date: string
+}
+
+export type CallLog = {
+  calls : Call[]
 }
 
 export type user = {

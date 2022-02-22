@@ -1,40 +1,49 @@
-import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
-import { Pressable, SafeAreaView, StyleSheet } from 'react-native';
+import { Pressable, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Styles from '../constants/Styles';
-import { style } from '../components/addLabel/style';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
 
-const  CallScreenHeader = (props) => {
+const  CallScreenHeader = () => {
     colorScheme = useColorScheme()
+    const [logType, setLogType] = useState("all");
     const navigation = useNavigation()
+
   return (
-    <SafeAreaView >
-      <View style={[tw`mx-0 flex-row justify-between my-2`]}>
-        <Text style = {Styles.headerTitle} >Edit</Text>
-        <View style = {[tw`flex-row justify-between`,styles.toggler, {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
-          <Text style={[tw`px-5 py-2 w-1/2 pr-3 rounded-full`, ]}>All</Text>
-          <Text style={tw`px-5 py-2 w-1/2 pl-2`}>Missed</Text>
+    <View>
+      <SafeAreaView >
+        <View style={[tw`mx-0 flex-row justify-between my-2`]}>
+          <Text style = {Styles.headerTitle} >Edit</Text>
+          <View style = {[tw`flex-row justify-between`,styles.toggler, {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
+            <TouchableOpacity style={[tw`px-3 py-2 w-1/2`, logType == "all"? styles.itemActive: null, , {alignItems: 'center'} ]} onPress={() => setLogType('all')}>
+              <Text style={{color: logType == "all"? "black": Colors[colorScheme].text}}>All</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={[tw`px-3 py-2 w-1/2`, logType !== "all"? styles.itemActive: null, {alignItems: 'center'}]} onPress={() => setLogType('Missed')}>
+              <Text style={{color: logType !== "all"? "black": Colors[colorScheme].text}} >Missed</Text>
+            </TouchableOpacity>
+          </View>
+          <Pressable
+              style={({ pressed }) => ({
+                  opacity: pressed ? 0.5 : 1,
+              })}
+              onPress={() => navigation.navigate('AddCallModal')}
+          >
+              <MaterialCommunityIcons
+                  name="phone-plus-outline" 
+                  size={25}
+                  color={Colors.light.tint}
+                  style={{fontWeight: 'bold'}}
+              />
+          </Pressable>
         </View>
-        <Pressable
-            style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-            })}
-            onPress={() => navigation.navigate('AddCallModal')}
-        >
-            <MaterialCommunityIcons
-                name="phone-plus-outline" 
-                size={25}
-                color={Colors.light.tint}
-                style={{fontWeight: 'bold'}}
-            />
-        </Pressable>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+      
+    </View>
   );
 }
 
@@ -45,13 +54,17 @@ const styles = StyleSheet.create({
   },
   toggler: {
     borderRadius: 8,
-    width: 150
+    width: 160,
+    padding: 1.5
   },
-  item: {
+  itemActive: {
     backgroundColor: 'white',
-    borderRadius: 8
-  }
+    borderRadius: 8,    
+  },
 
 });
+
+
+export const {logType} = CallScreenHeader;
 
 export default CallScreenHeader;

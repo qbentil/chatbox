@@ -1,20 +1,19 @@
 import { ScrollView, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
-import CallListItem from '../components/callListItem';
-import CallLog from '../components/CallLog';
+import CallLogs from "../components/CallLog"
 import CallScreenHeader from '../headers/CallScreenHeader'
-import CallsData from '../data/CallsData';
 import SearchBar from '../components/searchBar';
 
 export default function CallsScreen() {
+
   return (
     <View style={styles.container}>
       <CallScreenHeader />
       <ScrollView>
         <Text style = {[styles.title]}>Calls</Text>
         <SearchBar />
-        <CallLog />
+        <CallLogs type = {'all'} />
       </ScrollView>
     </View>
   );

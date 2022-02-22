@@ -2,8 +2,9 @@ import CallListItem from '../components/callListItem';
 import CallsData from '../data/CallsData';
 import {FlatList} from 'react-native';
 
-const CallLog = () => {
-    const SortedCallsData = CallsData.slice().sort((a, b) => new Date(b.date) - new Date(a.date))
+const CallLogs = (props) => {
+    const SortedCallsData = props.type == "all"?  CallsData.slice().sort((a, b) => new Date(b.date) - new Date(a.date)):  CallsData.slice().filter((e) => e.type == "Missed")
+
     return (
 
         <FlatList 
@@ -21,4 +22,4 @@ const CallLog = () => {
 
 }
 
-export default CallLog;
+export default CallLogs;

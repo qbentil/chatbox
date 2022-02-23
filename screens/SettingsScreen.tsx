@@ -1,27 +1,44 @@
 import { Text, View } from '../components/Themed';
+import { StyleSheet, ScrollView } from 'react-native';
+import { useState } from 'react';
+import SettingsScreenHeader from '../headers/SettingsScreenHeader'
+import Profile from '../components/Settings/profile';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { StyleSheet } from 'react-native';
 
 export default function SettingsScreen() {
+  const [titleShown, setTitleShown] = useState(false)
+
+
+  const handleScroll = function(event: Object) {
+    event.nativeEvent.contentOffset.y <= 0 ? setTitleShown(false): setTitleShown(true)
+  }
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <SettingsScreenHeader showTitle = {titleShown} />
+      <ScrollView  
+          onScroll={handleScroll} 
+          scrollEventThrottle = {1}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
+          nestedScrollEnabled
+        >
+           {!titleShown?  <Text style = {[styles.title]}>Settings</Text>: null}
+          {/* User Profile */}
+          <Profile />
+        </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: 0,
+    minHeight: 800,
+    flex: 1
   },
   title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 35,
+    fontWeight: '600',
   },
   separator: {
     marginVertical: 30,

@@ -37,3 +37,4 @@ ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
 3. AWS App Sync
 
 ## Personal Experiences & COmments
+<!-- Personal Comments to be updated soon -->

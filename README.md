@@ -1,7 +1,7 @@
 # chatbox (...ongoing)
-ChatBox is a WhatsApp Business Clone that built with React Native &amp; Expo
+ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
 
-# UI (DARK MODE)
+# UI (DARK SCHEME)
 <div style = "display:flex; flex-direction: row; flex-wrap: wrap;justify-content: space-around;">
     <img src = "https://user-images.githubusercontent.com/55560024/154983124-14a88b07-900b-48e0-a5da-8382acf58a64.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/154983158-868021fc-6b91-4db9-8699-58a23ab75dca.png"  style = "width: 150px"/>
@@ -12,7 +12,7 @@ ChatBox is a WhatsApp Business Clone that built with React Native &amp; Expo
 
 </div>
 
-# UI (LIGHT MODE)
+# UI (LIGHT SCHEME)
 <div  style = "display:flex; flex-direction: row; flex-wrap: wrap;justify-content: space-around;">
     <img src = "https://user-images.githubusercontent.com/55560024/154983286-24d45eb7-7b95-49a2-8c82-4fa346c2253d.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/154983305-e96e54aa-3604-4c05-929b-0169d28e0278.png"  style = "width: 150px"/>

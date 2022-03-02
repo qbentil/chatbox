@@ -21,6 +21,7 @@ export type RootStackParamList = {
   Modal: undefined;
   NotFound: undefined;
   LabelsScreen: undefined;
+  QRScan: undefined;
   AddLabel: undefined;
   ChatRoom: {
     id: string,

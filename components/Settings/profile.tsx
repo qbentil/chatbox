@@ -8,9 +8,11 @@ import profile from '../../data/profile';
 import { styles } from './style';
 import tw from 'twrnc'
 import useColorScheme from '../../hooks/useColorScheme';
+import { useNavigation } from '@react-navigation/native';
 
 const Profile = () => {
     const colorScheme = useColorScheme()
+    const navigation = useNavigation()
     return (
         <View style = {[tw`flex-row justify-between items-center my-3 py-4 px-2 border-t border-b`, {borderColor: Colors[colorScheme].backgroundOpac, borderTopWidth: 0.3, borderBottomWidth: 0.3, backgroundColor: colorScheme == 'light'? '#fff': '#0F0E0E'}]}>
             <View style = {tw`flex-row justify-between items-center w-2/3`}>
@@ -23,7 +25,11 @@ const Profile = () => {
                     <Text numberOfLines={1} ellipsizeMode = {'tail'}  style = {styles.status}>{profile.status}</Text>
                 </View>
             </View>
-            <TouchableOpacity activeOpacity={.7} style = {[tw`flex items-center mx-3`, styles.icon, {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
+            <TouchableOpacity 
+            activeOpacity={.7} 
+            style = {[tw`flex items-center mx-3`, styles.icon, {backgroundColor: Colors[colorScheme].backgroundOpac}]}
+            onPress = {() => navigation.navigate("QRScan")}
+            >
                 <Ionicons name="ios-qr-code-sharp" style = {tw`mt-2`} size={24} color={Colors.light.tint} />
             </TouchableOpacity>
         </View>

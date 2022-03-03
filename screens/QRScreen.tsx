@@ -1,9 +1,10 @@
-import { StyleSheet,  View, Image } from 'react-native';
-import { Text } from '../components/Themed';
-import profile from '../data/profile';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
+
 import Colors from '../constants/Colors';
 import QRScreenHeader from '../headers/QRScreenHeader'
 import { RootTabScreenProps } from '../types';
+import { Text } from '../components/Themed';
+import profile from '../data/profile';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 
@@ -27,6 +28,10 @@ export default function QRScreen({ navigation }: RootTabScreenProps<'Labels'>) {
                     style = {[tw`rounded-lg`,{width: 200, height: 200}]}                    
                   />
               </View>
+          </View>
+          <View>
+            <Text>You customer can scan this code to start a WhatsApp chat with you</Text>
+            <TouchableOpacity>Learn more</TouchableOpacity>
           </View>
         </View>
     </View>

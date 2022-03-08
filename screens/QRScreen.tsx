@@ -34,8 +34,8 @@ export default function QRScreen({ navigation }: RootTabScreenProps<'Labels'>) {
             <TouchableOpacity>Learn more</TouchableOpacity>
           </View>
         </View>
-        <View>
-          <TouchableOpacity>SACN</TouchableOpacity>
+        <View style = {tw`p-3`}>
+          <TouchableOpacity>SCAN</TouchableOpacity>
         </View>
     </View>
   );

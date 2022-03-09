@@ -8,18 +8,18 @@ import profile from '../data/profile';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 
-export default function QRScreen({ navigation }: RootTabScreenProps<'Labels'>) {
+export default function QRScreen({ navigation }: RootTabScreenProps<'QRScreen'>) {
   const colorScheme = useColorScheme();
   
   return (
     <View style={[styles.container, {backgroundColor: Colors[colorScheme].background}]}>
         <QRScreenHeader  />
-        <View style = {tw`flex-1  items-center`}>
+        <View style = {tw`items-center`}>
         <Image 
             source={{uri: profile.imageUri}}
             style = {styles.avatar}                    
           />
-          <View style = {tw`w-90 absolute items-center py-5  h-90 rounded-xl mt-32 ${colorScheme == 'light'? 'bg-gray-200': 'bg-gray-800'}`}>
+          <View style = {tw`w-90 items-center py-5  h-90 rounded-xl mt-28 ${colorScheme == 'light'? 'bg-gray-200': 'bg-gray-800'}`}>
     	        <Text style={tw`font-bold text-xl my-2`}>{profile.name}</Text>
               <Text style={tw` text-gray-500 text-sm`}>WhatsApp Business Account</Text>
               <View style ={tw`p-4 bg-white rounded-lg mt-5`}>
@@ -29,13 +29,20 @@ export default function QRScreen({ navigation }: RootTabScreenProps<'Labels'>) {
                   />
               </View>
           </View>
-          <View>
-            <Text>You customer can scan this code to start a WhatsApp chat with you</Text>
-            <TouchableOpacity>Learn more</TouchableOpacity>
-          </View>
         </View>
+        <View style={tw`py-5 px-3`}>
+          <Text style={tw`text-gray-400 text-sm text-center`}>
+            You customer can scan this code to start a WhatsApp chat with you.
+            <Text style={[{color: Colors.light.tint}]}>  Learn more</Text>
+          </Text>
+        </View>
+        <TouchableOpacity style={tw`w-100 items-center font-bold`}>
+            <Text style={tw`font-bold my-4 text-[${Colors.light.tint}]`}>Reset</Text>
+        </TouchableOpacity>
         <View style = {tw`p-3`}>
-          <TouchableOpacity>SCAN</TouchableOpacity>
+          <TouchableOpacity>
+              <Text>SCAN</Text>
+          </TouchableOpacity>
         </View>
     </View>
   );
@@ -57,7 +64,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#ccc",
     position: 'absolute',
-    top: 70,
+    top: 60,
     zIndex: 999,
 }
 

@@ -9,7 +9,8 @@ ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
     <img src = "https://user-images.githubusercontent.com/55560024/154983212-e00cab8c-c507-4bcc-92ad-b7445dec2390.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/155123224-a1c57bec-382d-4885-b2cf-d35550b84332.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/155857315-cd7ae776-d7ab-45b4-bcb3-7ae38e9c582f.png"  style = "width: 150px"/>
-    ![photo_2022-03-09_16-16-45](https://user-images.githubusercontent.com/55560024/157483389-3363dabb-1522-4127-9088-d74f014a813b.jpg)
+    <img src = "https://user-images.githubusercontent.com/55560024/157483389-3363dabb-1522-4127-9088-d74f014a813b.jpg"  style = "width: 150px"/>
+
 
 
 </div>
@@ -22,7 +23,7 @@ ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
     <img src = "https://user-images.githubusercontent.com/55560024/154983366-dd9de087-8150-4384-a3fd-2fad4add2dce.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/155123151-708a8255-2f49-4c65-9c99-30d69ca89c15.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/155857352-1612dba3-2f53-40e4-ad66-bc44ad0ecf82.png"  style = "width: 150px"/>
-    ![photo_2022-03-09_16-16-43](https://user-images.githubusercontent.com/55560024/157483471-0efa5671-ce03-4c6f-8425-b7b2275fbdec.jpg)
+    <img src = "https://user-images.githubusercontent.com/55560024/157483471-0efa5671-ce03-4c6f-8425-b7b2275fbdec.jpg"  style = "width: 150px"/>
 
 </div>
 

@@ -44,6 +44,7 @@ export type RootTabParamList = {
   Calls: undefined;
   AddLabel: undefined;
   Labels: undefined;
+  QRScreen: undefined;
 };
 
 export type ChatRoom = {

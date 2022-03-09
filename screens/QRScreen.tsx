@@ -33,15 +33,15 @@ export default function QRScreen({ navigation }: RootTabScreenProps<'QRScreen'>)
         <View style={tw`py-5 px-3`}>
           <Text style={tw`text-gray-400 text-sm text-center`}>
             You customer can scan this code to start a WhatsApp chat with you.
-            <Text style={[{color: Colors.light.tint}]}>  Learn more</Text>
+            <TouchableOpacity activeOpacity={.7}><Text style={[{color: Colors.light.tint}]}>  Learn more</Text></TouchableOpacity>
           </Text>
         </View>
-        <TouchableOpacity style={tw`w-100 items-center font-bold`}>
+        <TouchableOpacity activeOpacity={.7} style={tw`w-100 items-center font-bold`}>
             <Text style={tw`font-bold my-4 text-[${Colors.light.tint}]`}>Reset</Text>
         </TouchableOpacity>
-        <View style = {tw`p-3`}>
-          <TouchableOpacity>
-              <Text>SCAN</Text>
+        <View style = {tw`w-100 p-3 mt-18 items-center`}>
+          <TouchableOpacity activeOpacity={.7} style = {tw`w-3/5 rounded-lg items-center px-5 py-2 bg-[${Colors.light.tint}]`}>
+              <Text style = {tw` text-lg font-bold text-white`}>Share Code</Text>
           </TouchableOpacity>
         </View>
     </View>

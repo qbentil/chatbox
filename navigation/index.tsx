@@ -11,13 +11,13 @@ import ChatRoomScreen from '../screens/ChatRoomScreen';
 import Colors from '../constants/Colors';
 import LabelsScreen from '../screens/LabelsScreen';
 import LinkingConfiguration from './LinkingConfiguration';
-import ModalScreen from '../screens/ModalScreen';
+import NewChatModalScreen from '../screens/NewChatModalScreen';
 import NewGroupModalScreen from '../screens/NewGroupModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
+import QRScreen from '../screens/QRScreen';
 import Styles from '../constants/Styles';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import useColorScheme from '../hooks/useColorScheme';
-import QRScreen from '../screens/QRScreen';
 
 /**
  * If you are not familiar with React Navigation, refer to the "Fundamentals" guide:
@@ -98,8 +98,8 @@ function RootNavigator() {
 
         {/* Modal Screens */}
         <Stack.Group screenOptions={{ presentation: 'modal' }}>
-          <Stack.Screen name="Modal" component={ModalScreen} />
-          <Stack.Screen name="AddCallModal" component={ModalScreen} />
+          <Stack.Screen name="Modal" component={NewChatModalScreen} />
+          <Stack.Screen name="AddCallModal" component={NewChatModalScreen} />
           <Stack.Screen name="NewGroupModal" component={NewGroupModalScreen} />
         </Stack.Group>
     </Stack.Navigator>

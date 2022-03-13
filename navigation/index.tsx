@@ -102,18 +102,24 @@ function RootNavigator() {
           screenOptions={({navigation}) => ({
             presentation: 'modal',
             headerStyle: {
-              backgroundColor: colorScheme == 'light'? 'white':'#373737'
+              backgroundColor: colorScheme == 'light'? 'white':'#333333'
+            },
+            headerTitleStyle: {
+              color: Colors[colorScheme].text,
+              fontSize: 22,
+              fontWeight: 'bold',
+              
             },
             headerRight: () => (
               <TouchableOpacity
-                onPress={() => navigation.navigate('Modal')}
-                style={[{backgroundColor: '#eee'}, tw`p-1 w-8 h-8 rounded-full`]}
+                onPress={() => navigation.goBack()}
+                style={[tw`p-1 w-8 h-8 rounded-full shadow-md ${colorScheme ==='light'? 'bg-[#c5c6d0]':'bg-[#555555]'}`]}
                 >
                   <Ionicons 
                   name="close" 
                   size={24}
                   // color={}
-                  style={[tw`${colorScheme == 'light'? 'text-gray-200': 'text-gray-600'}`,{fontWeight: 'bold'}]}
+                  style={[tw`${colorScheme == 'light'? 'text-gray-900': 'text-gray-200'} font-bold`]}
                   />
                 </TouchableOpacity>
             ),

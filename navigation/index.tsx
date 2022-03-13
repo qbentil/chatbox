@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { ColorSchemeName, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ColorSchemeName, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 
 import AddLabelsScreen from '../screens/AddLabelScreen';
@@ -17,6 +17,7 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import QRScreen from '../screens/QRScreen';
 import Styles from '../constants/Styles';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 
 /**
@@ -97,8 +98,34 @@ function RootNavigator() {
         <Stack.Screen name="QRScan" component={QRScreen}  options={{ headerShown: false}} />
 
         {/* Modal Screens */}
-        <Stack.Group screenOptions={{ presentation: 'modal' }}>
-          <Stack.Screen name="Modal" component={NewChatModalScreen} />
+        <Stack.Group 
+          screenOptions={({navigation}) => ({
+            presentation: 'modal',
+            headerStyle: {
+              backgroundColor: colorScheme == 'light'? 'white':'#333333'
+            },
+            headerTitleStyle: {
+              color: Colors[colorScheme].text,
+              fontSize: 22,
+              fontWeight: 'bold',
+              
+            },
+            headerRight: () => (
+              <TouchableOpacity
+                onPress={() => navigation.goBack()}
+                style={[tw`p-1 w-8 h-8 rounded-full shadow-md ${colorScheme ==='light'? 'bg-[#c5c6d0]':'bg-[#555555]'}`]}
+                >
+                  <Ionicons 
+                  name="close" 
+                  size={24}
+                  // color={}
+                  style={[tw`${colorScheme == 'light'? 'text-gray-900': 'text-gray-200'} font-bold`]}
+                  />
+                </TouchableOpacity>
+            ),
+          })}
+        >
+          <Stack.Screen name="Modal" component={NewChatModalScreen} options={{ title: 'New Chat'}}/>
           <Stack.Screen name="AddCallModal" component={NewChatModalScreen} />
           <Stack.Screen name="NewGroupModal" component={NewGroupModalScreen} />
         </Stack.Group>

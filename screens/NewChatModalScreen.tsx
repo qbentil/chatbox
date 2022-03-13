@@ -2,6 +2,7 @@ import { Platform, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import NewChatModalHeader from '../headers/NewChatModalHeader';
+import SearchBar from '../components/searchBar';
 import { StatusBar } from 'expo-status-bar';
 
 export default function NewChatModalScreen() {
@@ -10,6 +11,7 @@ export default function NewChatModalScreen() {
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
       {/* <NewChatModalHeader /> */}
+      <SearchBar />
       
     </View>
   );

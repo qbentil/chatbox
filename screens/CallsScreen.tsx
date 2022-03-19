@@ -4,16 +4,18 @@ import { Text, View } from '../components/Themed';
 import CallLogs from "../components/CallLog"
 import CallScreenHeader from '../headers/CallScreenHeader'
 import SearchBar from '../components/searchBar';
+import { useState } from 'react';
 
 export default function CallsScreen() {
+  const [logType, setLogType] = useState('all');
 
   return (
     <View style={styles.container}>
-      <CallScreenHeader />
+      <CallScreenHeader logType={setLogType} />
       <ScrollView>
         <Text style = {[styles.title]}>Calls</Text>
         <SearchBar />
-        <CallLogs type = {'all'} />
+        <CallLogs type = {logType} />
       </ScrollView>
     </View>
   );

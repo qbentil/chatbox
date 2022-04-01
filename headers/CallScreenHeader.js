@@ -9,9 +9,8 @@ import useColorScheme from '../hooks/useColorScheme';
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 
-const  CallScreenHeader = ({logType}) => {
+const  CallScreenHeader = ({logType, selected}) => {
     colorScheme = useColorScheme()
-    // const [logType, setLogType] = useState("all");
     const navigation = useNavigation()
   return (
     <View>
@@ -19,11 +18,11 @@ const  CallScreenHeader = ({logType}) => {
         <View style={[tw`mx-0 flex-row justify-between my-2`]}>
           <Text style = {Styles.headerTitle} >Edit</Text>
           <View style = {[tw`flex-row justify-between`,styles.toggler, {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
-            <TouchableOpacity style={[tw`px-3 py-2 w-1/2`, logType == "all"? styles.itemActive: null, , {alignItems: 'center'} ]} onPress={() => logType('all')}>
-              <Text style={{color: logType == "all"? "black": Colors[colorScheme].text}}>All</Text>
+            <TouchableOpacity style={[tw`px-3 py-2 w-1/2`, selected == "all"? styles.itemActive: null, , {alignItems: 'center'} ]} onPress={() => logType('all')}>
+              <Text style={{color: selected == "all"? "black": Colors[colorScheme].text}}>All</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[tw`px-3 py-2 w-1/2`, logType !== "all"? styles.itemActive: null, {alignItems: 'center'}]} onPress={() => logType('Missed')}>
-              <Text style={{color: logType !== "all"? "black": Colors[colorScheme].text}} >Missed</Text>
+            <TouchableOpacity style={[tw`px-3 py-2 w-1/2`, selected !== "all"? styles.itemActive: null, {alignItems: 'center'}]} onPress={() => logType('Missed')}>
+              <Text style={{color: selected !== "all"? "black": Colors[colorScheme].text}} >Missed</Text>
             </TouchableOpacity>
           </View>
           <Pressable

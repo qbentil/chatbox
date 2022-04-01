@@ -7,7 +7,6 @@ import Styles from '../constants/Styles';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 import { useNavigation } from '@react-navigation/native';
-import { useState } from 'react';
 
 const  CallScreenHeader = ({logType, selected}) => {
     colorScheme = useColorScheme()

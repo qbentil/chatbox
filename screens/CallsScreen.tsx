@@ -11,7 +11,7 @@ export default function CallsScreen() {
 
   return (
     <View style={styles.container}>
-      <CallScreenHeader logType={setLogType} />
+      <CallScreenHeader logType={setLogType} selected = {logType} />
       <ScrollView>
         <Text style = {[styles.title]}>Calls</Text>
         <SearchBar />

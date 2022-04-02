@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   toggler: {
     borderRadius: 8,
     width: 160,
-    padding: 1.5
+    padding: 1.5,
   },
   itemActive: {
     backgroundColor: 'white',

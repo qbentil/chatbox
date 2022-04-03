@@ -3,18 +3,20 @@ import { Text, View } from '../components/Themed';
 
 import CallLogs from "../components/CallLog"
 import CallScreenHeader from '../headers/CallScreenHeader'
+import Colors from '../constants/Colors';
 import SearchBar from '../components/searchBar';
+import useColorScheme from '../hooks/useColorScheme';
 import { useState } from 'react';
 
 export default function CallsScreen() {
   const [logType, setLogType] = useState('all');
-
+  const colorScheme = useColorScheme()
   return (
     <View style={styles.container}>
       <CallScreenHeader logType={setLogType} selected = {logType} />
       <ScrollView>
         <Text style = {[styles.title]}>Calls</Text>
-        <SearchBar />
+        <SearchBar style = {{backgroundColor: Colors[colorScheme].backgroundOpac}} />
         <CallLogs type = {logType} />
       </ScrollView>
     </View>

@@ -1,5 +1,6 @@
-import { Platform, StyleSheet, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 
+import ChatList from '../components/ChatList';
 import NewChatModalHeader from '../headers/NewChatModalHeader';
 import NewChatNavs from '../components/NewChatNav';
 import SearchBar from '../components/searchBar';
@@ -25,6 +26,10 @@ export default function NewChatModalScreen() {
       <View style = {tw`w-full`}>
         <SectionTitle title = {'Frequently Contacted'} />
       </View>
+      <ScrollView style = {tw`w-full`}>
+      <ChatList />
+      </ScrollView>
+      
       
     </View>
   );

@@ -18,7 +18,7 @@ export default function NewChatModalScreen() {
       <View style = {tw`w-full px-3 bg-${colorScheme == 'light'? 'white': '[#333333]'}`}>
         <SearchBar style = {tw`bg-[#3b3b3b]`} />
       </View>
-      <View style = {tw`w-full`}>
+      <View style = {tw`w-full py-2`}>
         <NewChatNavs />
       </View>
       

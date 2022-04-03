@@ -7,10 +7,10 @@ import Style from './Style';
 import tw from 'twrnc'
 import useColorScheme from '../../hooks/useColorScheme';
 
-const SearchBar = (props) =>{
+const SearchBar = ({style}) =>{
     const colorScheme = useColorScheme();
     return (
-        <View style={[Style.container, {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
+        <View style={[Style.container, style]}>
             <Ionicons name='search' size={22} color = {Colors[colorScheme].tabIconDefault} />
             <TextInput
                 style={[tw`flex-1 py-1 pl-2`, Style.input, {color: Colors[colorScheme].text}]}

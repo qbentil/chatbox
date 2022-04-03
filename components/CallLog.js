@@ -2,8 +2,8 @@ import CallListItem from '../components/callListItem';
 import CallsData from '../data/CallsData';
 import {FlatList} from 'react-native';
 
-const CallLogs = (props) => {
-    const SortedCallsData = props.type == "all"?  CallsData.slice().sort((a, b) => new Date(b.date) - new Date(a.date)):  CallsData.slice().filter((e) => e.type == "Missed")
+const CallLogs = ({type}) => {
+    const SortedCallsData = type == "all"?  CallsData.slice().sort((a, b) => new Date(b.date) - new Date(a.date)):  CallsData.slice().filter((e) => e.type == "Missed")
 
     return (
 

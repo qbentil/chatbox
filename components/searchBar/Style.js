@@ -8,6 +8,7 @@ export default {
         marginVertical: 10,
         paddingHorizontal: 10,
         paddingVertical: 5,
+        height: 45,
     },
     input: {
         fontSize: 17,

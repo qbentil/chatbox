@@ -3,6 +3,7 @@ import { Platform, StyleSheet, View } from 'react-native';
 import NewChatModalHeader from '../headers/NewChatModalHeader';
 import NewChatNavs from '../components/NewChatNav';
 import SearchBar from '../components/searchBar';
+import SectionTitle from '../components/NewChatSectionTitle';
 import { StatusBar } from 'expo-status-bar';
 import { Text } from '../components/Themed';
 import tw from 'twrnc';
@@ -20,6 +21,9 @@ export default function NewChatModalScreen() {
       </View>
       <View style = {tw`w-full py-2`}>
         <NewChatNavs />
+      </View>
+      <View style = {tw`w-full`}>
+        <SectionTitle title = {'Frequently Contacted'} />
       </View>
       
     </View>

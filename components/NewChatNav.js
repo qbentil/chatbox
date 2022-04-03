@@ -24,7 +24,7 @@ const NewChatNavs = () => {
           </View>
         </TouchableOpacity>
       </View>
-      <View style = {tw`mb-2 border-gray-200 border-opacity-30 border-b`}>
+      <View style = {tw``}>
         <TouchableOpacity activeOpacity = {.7}
           style={tw`flex-row justify-between p-1 pt-0 pl-0`}
           onPress = {() => navigation.navigate("LabelsScreen")}

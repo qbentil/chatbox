@@ -17,7 +17,7 @@ const NewChatNavs = () => {
           style={tw`flex-row justify-between p-1 pt-0 pl-0 `}
         >
           <View style={tw`flex-row justify-between`}>
-            <View style={[tw`mr-2 p-3 rounded-full`, {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
+            <View style={[tw`mr-2 p-3</View> rounded-full`, {backgroundColor: Colors[colorScheme].backgroundOpac}]}>
               <Feather name='users' size={15} color = {Colors.light.tint} />
             </View>
             <Text style={[tw`text-lg`, {color: Colors.light.tint}]}>New Group</Text>

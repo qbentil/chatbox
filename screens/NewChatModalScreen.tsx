@@ -1,9 +1,11 @@
 import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 
 import ChatList from '../components/ChatList';
+import ContactList from '../components/ContactList';
 import NewChatModalHeader from '../headers/NewChatModalHeader';
 import NewChatNavs from '../components/NewChatNav';
 import SearchBar from '../components/searchBar';
+import SectionListView from '../components/Lists/SectionList';
 import SectionTitle from '../components/NewChatSectionTitle';
 import { StatusBar } from 'expo-status-bar';
 import { Text } from '../components/Themed';
@@ -30,7 +32,7 @@ export default function NewChatModalScreen() {
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
       >
-        <ChatList />
+        <ContactList />
       </ScrollView>
       
       

@@ -33,7 +33,7 @@ const UserListItem = ({user}) => {
           <View style = {[tw`border-b flex-row justify-between w-75`, {borderBottomColor: Colors[colorScheme].backgroundOpac}]}>
             <View>
               <Text style={Style.username}>{user.name}</Text>
-              <Text numberOfLines={2} ellipsizeMode = {'tail'} style={Style.lastMessage}>{chatRoom.lastMessage.content}</Text>
+              <Text numberOfLines={2} ellipsizeMode = {'tail'} style={Style.lastMessage}>{user.name}</Text>
             </View>
             {/* <View>
               <Text style={Style.time}>

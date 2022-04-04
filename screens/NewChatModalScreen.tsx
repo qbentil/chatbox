@@ -1,9 +1,11 @@
 import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 
 import ChatList from '../components/ChatList';
+import ContactList from '../components/ContactList';
 import NewChatModalHeader from '../headers/NewChatModalHeader';
 import NewChatNavs from '../components/NewChatNav';
 import SearchBar from '../components/searchBar';
+import SectionListView from '../components/Lists/SectionList';
 import SectionTitle from '../components/NewChatSectionTitle';
 import { StatusBar } from 'expo-status-bar';
 import { Text } from '../components/Themed';
@@ -26,8 +28,11 @@ export default function NewChatModalScreen() {
       <View style = {tw`w-full`}>
         <SectionTitle title = {'Frequently Contacted'} />
       </View>
-      <ScrollView style = {tw`w-full`}>
-      <ChatList />
+      <ScrollView style = {tw`w-full`}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
+      >
+        <ContactList />
       </ScrollView>
       
       
@@ -37,7 +42,7 @@ export default function NewChatModalScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },

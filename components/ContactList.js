@@ -12,8 +12,8 @@ const ContactList = () => {
 
     return (
 
-        <FlatListView data={SortedChatData} />
-        // <SectionListView contacts={Users} />
+        // <FlatListView data={SortedChatData} />
+        <SectionListView contacts={Users} />
 
     );
 

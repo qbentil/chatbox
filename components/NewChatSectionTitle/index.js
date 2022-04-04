@@ -1,7 +1,10 @@
+import { Text, View } from '../Themed'
+
 import React from 'react'
-import { Text } from '../Themed'
-import {View} from 'react-native'
 import tw from 'twrnc'
+
+// import {View} from 'react-native'
+
 
 export default function SectionTitle({title}) {
   return (

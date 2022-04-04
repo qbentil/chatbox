@@ -44,3 +44,4 @@ ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
 Personal Comments to be updated soon....................
 1. Use and Manage of States
 2. Prop drilling (not recommended tho😊)
+3. Create of FlatList and Section List Componets to Re3nder Contacts

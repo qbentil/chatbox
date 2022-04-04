@@ -26,8 +26,11 @@ export default function NewChatModalScreen() {
       <View style = {tw`w-full`}>
         <SectionTitle title = {'Frequently Contacted'} />
       </View>
-      <ScrollView style = {tw`w-full`}>
-      <ChatList />
+      <ScrollView style = {tw`w-full`}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
+      >
+        <ChatList />
       </ScrollView>
       
       
@@ -37,7 +40,7 @@ export default function NewChatModalScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },

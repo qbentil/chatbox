@@ -1,4 +1,5 @@
-import { Platform, ScrollView, StyleSheet, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet } from 'react-native';
+import { Text, View } from '../components/Themed';
 
 import ChatList from '../components/ChatList';
 import ContactList from '../components/ContactList';
@@ -8,7 +9,6 @@ import SearchBar from '../components/searchBar';
 import SectionListView from '../components/Lists/SectionList';
 import SectionTitle from '../components/NewChatSectionTitle';
 import { StatusBar } from 'expo-status-bar';
-import { Text } from '../components/Themed';
 import tw from 'twrnc';
 import useColorScheme from '../hooks/useColorScheme';
 
@@ -20,7 +20,7 @@ export default function NewChatModalScreen() {
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
       {/* <NewChatModalHeader /> */}
       <View style = {tw`w-full px-3 bg-${colorScheme == 'light'? 'white': '[#333333]'}`}>
-        <SearchBar style = {tw`bg-[#3b3b3b]`} />
+        <SearchBar style = {tw`bg-${colorScheme == 'light'? `[#ebebeb]`:'[#3b3b3b]'}`} />
       </View>
       <View style = {tw`w-full py-2`}>
         <NewChatNavs />

@@ -9,10 +9,11 @@ import { StatusBar } from 'expo-status-bar';
 import Users from '../data/Users';
 import tw from 'twrnc';
 import useColorScheme from '../hooks/useColorScheme';
+import { useState } from 'react';
 
 const Freqs: Array<string> = [];
 export default function NewChatModalScreen() {
-  
+  const [users, setUsers] = useState(Users);
   const colorScheme = useColorScheme();
   const onSearch = (name: string) => {
     console.log(name);
@@ -39,7 +40,7 @@ export default function NewChatModalScreen() {
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
       >
-        <ContactList data = {Users}  />
+        <ContactList data = {users}  />
       </ScrollView>
       
       

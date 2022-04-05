@@ -26,7 +26,7 @@ export default function NewChatModalScreen() {
         <NewChatNavs />
       </View>
       <View style = {tw`w-full`}>
-        <SectionTitle title = {'Frequently Contacted'} />
+        {/* <SectionTitle title = {'Frequently Contacted'} /> */}
       </View>
       <ScrollView style = {tw`w-full`}
           showsVerticalScrollIndicator={false}

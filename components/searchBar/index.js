@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { Text, View } from '../Themed';
 
 import Colors from '../../constants/Colors';
@@ -7,20 +7,24 @@ import Style from './Style';
 import tw from 'twrnc'
 import useColorScheme from '../../hooks/useColorScheme';
 
-const SearchBar = ({style}) =>{
+const SearchBar = ({style, search}) =>{
     const colorScheme = useColorScheme();
     return (
-        <View style={[Style.container, style]}>
+        <KeyboardAvoidingView 
+        behavior = 'padding' 
+        style={[Style.container, style]}
+        
+        >
             <Ionicons name='search' size={22} color = {Colors[colorScheme].tabIconDefault} />
             <TextInput
                 style={[tw`flex-1 py-1 pl-2`, Style.input, {color: Colors[colorScheme].text}]}
                 placeholder="Search"
-                onChangeText={(searchString) => {console.log(searchString)}}
+                onChangeText={(searchString) => {search(searchString)}}
                 underlineColorAndroid="transparent"
                 placeholderTextColor={Colors[colorScheme].tabIconDefault}
                 returnKeyType = {'search'}
             />
-        </View>
+        </KeyboardAvoidingView>
     );
 }
 

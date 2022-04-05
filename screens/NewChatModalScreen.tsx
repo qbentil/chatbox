@@ -6,6 +6,7 @@ import NewChatNavs from '../components/NewChatNav';
 import SearchBar from '../components/searchBar';
 import SectionTitle from '../components/NewChatSectionTitle';
 import { StatusBar } from 'expo-status-bar';
+import Users from '../data/Users';
 import tw from 'twrnc';
 import useColorScheme from '../hooks/useColorScheme';
 
@@ -38,7 +39,7 @@ export default function NewChatModalScreen() {
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
       >
-        <ContactList  />
+        <ContactList data = {Users}  />
       </ScrollView>
       
       

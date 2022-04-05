@@ -1,17 +1,15 @@
 import { Platform, ScrollView, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
-import ChatList from '../components/ChatList';
 import ContactList from '../components/ContactList';
-import NewChatModalHeader from '../headers/NewChatModalHeader';
 import NewChatNavs from '../components/NewChatNav';
 import SearchBar from '../components/searchBar';
-import SectionListView from '../components/Lists/SectionList';
 import SectionTitle from '../components/NewChatSectionTitle';
 import { StatusBar } from 'expo-status-bar';
 import tw from 'twrnc';
 import useColorScheme from '../hooks/useColorScheme';
 
+const Freqs: Array<string> = [];
 export default function NewChatModalScreen() {
   const colorScheme = useColorScheme();
   return (
@@ -25,9 +23,13 @@ export default function NewChatModalScreen() {
       <View style = {tw`w-full py-2`}>
         <NewChatNavs />
       </View>
-      <View style = {tw`w-full`}>
-        {/* <SectionTitle title = {'Frequently Contacted'} /> */}
-      </View>
+      {
+        Freqs.length > 0 && (
+          <View style = {tw`w-full`}>
+            <SectionTitle title = {'Frequently Contacted'} />
+          </View>
+        )
+      }
       <ScrollView style = {tw`w-full`}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}

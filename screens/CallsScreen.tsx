@@ -11,12 +11,17 @@ import { useState } from 'react';
 export default function CallsScreen() {
   const [logType, setLogType] = useState('all');
   const colorScheme = useColorScheme()
+
+  // Search func
+  const onSearch = (name: string) => {
+    console.log(name);
+  }
   return (
     <View style={styles.container}>
       <CallScreenHeader logType={setLogType} selected = {logType} />
       <ScrollView>
         <Text style = {[styles.title]}>Calls</Text>
-        <SearchBar style = {{backgroundColor: Colors[colorScheme].backgroundOpac}} />
+        <SearchBar search = {onSearch} style = {{backgroundColor: Colors[colorScheme].backgroundOpac}} />
         <CallLogs type = {logType} />
       </ScrollView>
     </View>

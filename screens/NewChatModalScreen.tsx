@@ -1,38 +1,46 @@
-import { Platform, ScrollView, StyleSheet, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet } from 'react-native';
+import { Text, View } from '../components/Themed';
 
-import ChatList from '../components/ChatList';
 import ContactList from '../components/ContactList';
-import NewChatModalHeader from '../headers/NewChatModalHeader';
 import NewChatNavs from '../components/NewChatNav';
 import SearchBar from '../components/searchBar';
-import SectionListView from '../components/Lists/SectionList';
 import SectionTitle from '../components/NewChatSectionTitle';
 import { StatusBar } from 'expo-status-bar';
-import { Text } from '../components/Themed';
+import Users from '../data/Users';
 import tw from 'twrnc';
 import useColorScheme from '../hooks/useColorScheme';
+import { useState } from 'react';
 
+const Freqs: Array<string> = [];
 export default function NewChatModalScreen() {
+  const [users, setUsers] = useState(Users);
   const colorScheme = useColorScheme();
+  const onSearch = (name: string) => {
+    console.log(name);
+  }
   return (
     <View style={styles.container}>
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
       {/* <NewChatModalHeader /> */}
       <View style = {tw`w-full px-3 bg-${colorScheme == 'light'? 'white': '[#333333]'}`}>
-        <SearchBar style = {tw`bg-[#3b3b3b]`} />
+        <SearchBar search = {onSearch} style = {tw`bg-${colorScheme == 'light'? `[#ebebeb]`:'[#3b3b3b]'}`} />
       </View>
       <View style = {tw`w-full py-2`}>
         <NewChatNavs />
       </View>
-      <View style = {tw`w-full`}>
-        <SectionTitle title = {'Frequently Contacted'} />
-      </View>
+      {
+        Freqs.length > 0 && (
+          <View style = {tw`w-full`}>
+            <SectionTitle title = {'Frequently Contacted'} />
+          </View>
+        )
+      }
       <ScrollView style = {tw`w-full`}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
       >
-        <ContactList />
+        <ContactList data = {users}  />
       </ScrollView>
       
       

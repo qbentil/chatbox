@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import {SectionList} from 'react-native'
 import SectionTitle from '../NewChatSectionTitle';
-import { Text } from '../Themed';
 import UserListItem from '../UsersListItem';
 
 const renderItem = ({item}) => <UserListItem user = {item} />

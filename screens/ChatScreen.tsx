@@ -16,6 +16,11 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
   const handleScroll = function(event: Object) {
     event.nativeEvent.contentOffset.y <= 0 ? setTitleShown(false): setTitleShown(true)
   }
+
+  const onSearch = (name:string) => {
+    console.log(name);
+    
+  }
   
   return (
     <View style={[styles.container, {backgroundColor: Colors[colorScheme].background}]}>
@@ -28,7 +33,7 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
           nestedScrollEnabled
         >
            {!titleShown?  <Text style = {[styles.title]}>WA Business</Text>: null}
-            <SearchBar style = {{backgroundColor: Colors[colorScheme].backgroundOpac}} />
+            <SearchBar search = {onSearch} style = {{backgroundColor: Colors[colorScheme].backgroundOpac}} />
             <ChatNavs />
             <ChatList />
         </ScrollView>

@@ -1,9 +1,9 @@
 export default [
   {
     id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t31.0-1/s200x200/22256588_1932617800312085_5686197942193420542_o.jpg?_nc_cat=110&_nc_sid=7206a8&_nc_eui2=AeF3UwtnAs3QLEJRnLSp4-hQxlokCBJZ6JPGWiQIElnok9HafHyjqv9D4bW9zeNFfNJlg5jLsvbewM7j5OD-OFy-&_nc_ohc=IxycgYSpqQEAX8EcTqI&_nc_ht=scontent.fkiv3-1.fna&tp=7&oh=640a83293bb75378958d22b633302f1b&oe=5F9F4BB7',
-    status: "Hello there, how are you"
+    name: 'AllyTyson',
+    imageUri: 'https://avatars.githubusercontent.com/u/88384474?v=4',
+    status: "Console.WriteLine('Please can I get a cup of code?');"
   }, {
     id: 'u2',
     name: 'Lukas',
@@ -17,8 +17,8 @@ export default [
   }, {
     id: 'u4',
     name: 'Alex',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t1.0-9/120265890_2659046234308755_83273782629061168_n.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_eui2=AeFydVcQHwdfhPgKavejHgTkZj50mLqkTwRmPnSYuqRPBBjekO0sZKdUNlELv62Htps4xAUKslo4tD8g8YyTPQ50&_nc_ohc=YcnPR2BvKUgAX_rSMDJ&_nc_ht=scontent.fkiv3-1.fna&oh=ea3bcd9c21e5538c744e4cb19464713b&oe=5F9E4002',
-    status: "Money on my mind👀"
+    imageUri: 'https://avatars.githubusercontent.com/u/89520838?v=4',
+    status: "Money💸 on my mind > Statistics📚"
   }, {
     id: 'u5',
     name: 'Vlad',
@@ -27,8 +27,8 @@ export default [
   }, {
     id: 'u6',
     name: 'Elon Musk',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t1.0-9/117929133_107809907710190_7419805747453745280_n.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_eui2=AeHyr9m8dMUXCyqgYiDxTTMqypeilYrkr1_Kl6KViuSvX2aKglh0TaInpI6Uqbk8nRSKq6iOQuTncbpb6Uik2iH8&_nc_ohc=YusbV4P7yQMAX9ptPAN&_nc_ht=scontent.fkiv3-1.fna&oh=ebee2db09b2a70c9dbef1bdad876c09c&oe=5F9D4112',
-    status: "At Work"
+    imageUri: 'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTc5OTk2ODUyMTMxNzM0ODcy/gettyimages-1229892983-square.jpg',
+    status: "Tesla to the f*kn Wiase🔥🔥"
   }, {
     id: 'u7',
     name: 'Adrian',
@@ -47,6 +47,6 @@ export default [
   }, {
     id: 'u10',
     name: '@ethel3👩‍💻🥷',
-    imageUri: 'https://codersquiz.netlify.app/img/bentil.jpeg',
+    imageUri: 'https://avatars.githubusercontent.com/u/88440439?v=4',
     status: "SILENCE🤐 is💫 Golden✨"
   }]

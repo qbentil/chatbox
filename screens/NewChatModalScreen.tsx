@@ -11,14 +11,18 @@ import useColorScheme from '../hooks/useColorScheme';
 
 const Freqs: Array<string> = [];
 export default function NewChatModalScreen() {
+  
   const colorScheme = useColorScheme();
+  const onSearch = (name: string) => {
+    console.log(name);
+  }
   return (
     <View style={styles.container}>
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
       {/* <NewChatModalHeader /> */}
       <View style = {tw`w-full px-3 bg-${colorScheme == 'light'? 'white': '[#333333]'}`}>
-        <SearchBar style = {tw`bg-${colorScheme == 'light'? `[#ebebeb]`:'[#3b3b3b]'}`} />
+        <SearchBar search = {onSearch} style = {tw`bg-${colorScheme == 'light'? `[#ebebeb]`:'[#3b3b3b]'}`} />
       </View>
       <View style = {tw`w-full py-2`}>
         <NewChatNavs />
@@ -34,7 +38,7 @@ export default function NewChatModalScreen() {
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
       >
-        <ContactList />
+        <ContactList  />
       </ScrollView>
       
       

@@ -14,9 +14,17 @@ import { useState } from 'react';
 const Freqs: Array<string> = [];
 export default function NewChatModalScreen() {
   const [users, setUsers] = useState(Users);
+  const [query, setQuery] = useState('')
   const colorScheme = useColorScheme();
+  
+  const filteredUsers =query === '' ? Users: Users.filter((user) =>
+  user.name
+    .toLowerCase()
+    .replace(/\s+/g, '')
+    .includes(query.toLowerCase().replace(/\s+/g, ''))
+)
   const onSearch = (name: string) => {
-    console.log(name);
+    setQuery(name);
   }
   return (
     <View style={styles.container}>
@@ -29,6 +37,7 @@ export default function NewChatModalScreen() {
       <View style = {tw`w-full py-2`}>
         <NewChatNavs />
       </View>
+      
       {
         Freqs.length > 0 && (
           <View style = {tw`w-full`}>
@@ -40,7 +49,7 @@ export default function NewChatModalScreen() {
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
       >
-        <ContactList data = {users}  />
+       <ContactList data = {users}  />
       </ScrollView>
       
       

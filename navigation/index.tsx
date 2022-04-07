@@ -15,6 +15,7 @@ import NewChatModalScreen from '../screens/NewChatModalScreen';
 import NewGroupModalScreen from '../screens/NewGroupModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import QRScreen from '../screens/QRScreen';
+import StatusPrivacy from '../screens/StatusPrivacy';
 import Styles from '../constants/Styles';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import tw from 'twrnc'
@@ -94,6 +95,7 @@ function RootNavigator() {
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
         <Stack.Screen name="LabelsScreen" component={LabelsScreen} options={{ title: 'Labels!', headerShown: false }} />
         <Stack.Screen name="AddLabel" component={AddLabelsScreen} options={{ title: 'Labels!', headerShown: false }} />
+        <Stack.Screen name="StatusPrivacy" component={StatusPrivacy} options={{ title: 'Status Privacy', headerShown: true }} />
         <Stack.Screen name="ChatRoom" component={ChatRoomScreen}  options={{ headerShown: false}} />
         <Stack.Screen name="QRScan" component={QRScreen}  options={{ headerShown: false}} />
 

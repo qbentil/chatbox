@@ -49,4 +49,10 @@ export default [
     name: '@ethel3👩‍💻🥷',
     imageUri: 'https://avatars.githubusercontent.com/u/88440439?v=4',
     status: "SILENCE🤐 is💫 Golden✨"
-  }]
+  }, {
+    id: 'u11',
+    name: 'Theboybreyy',
+    imageUri: 'https://avatars.githubusercontent.com/u/86781764?v=4',
+    status: "Code with Passion👀"
+  },
+  ]

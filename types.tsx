@@ -23,6 +23,7 @@ export type RootStackParamList = {
   LabelsScreen: undefined;
   QRScan: undefined;
   AddLabel: undefined;
+  StatusPrivacy: undefined;
   ChatRoom: {
     id: string,
     name: string,

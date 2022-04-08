@@ -4,6 +4,7 @@ import { Text, View } from '../components/Themed';
 import AddLabel from '../components/addLabel';
 import AddLabelScreenHeader from '../headers/AddLabelScreenHeader';
 import Colors from '../constants/Colors';
+import PrivacyItem from '../components/Status/PrivacyItem';
 import { RootTabScreenProps } from '../types';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
@@ -13,8 +14,11 @@ export default function StatusPrivacy({ navigation }: RootTabScreenProps<'AddLab
   
   return (
     <View style={[styles.container, {backgroundColor: Colors[colorScheme].background}]}>
-        <AddLabelScreenHeader enableSave = {false}  />
-        <AddLabel />
+      <View style = {tw`my-3 mt-8`}>
+        <Text style = {tw`uppercase text-lg font-semibold text-[${Colors[colorScheme].backgroundOpac}]`}>WHo will see my updates</Text>
+      </View>
+        <PrivacyItem showIcon iconBgColor={'#FFB72B'} iconName = {'star'} title = {'Starred Messages'} />
+        
     </View>
   );
 }

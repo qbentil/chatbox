@@ -93,7 +93,7 @@ function RootNavigator() {
           })} 
       />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-        <Stack.Screen name="LabelsScreen" component={LabelsScreen} options={{ title: 'Labels!', headerShown: false }} />
+        <Stack.Screen name="LabelsScreen" component={LabelsScreen} options={{ title: 'Labels!', headerShown: false, headerTitleStyle: {color: Colors[colorScheme].text} }} />
         <Stack.Screen name="AddLabel" component={AddLabelsScreen} options={{ title: 'Labels!', headerShown: false }} />
         <Stack.Screen name="StatusPrivacy" component={StatusPrivacy} options={{ title: 'Status Privacy', headerShown: true }} />
         <Stack.Screen name="ChatRoom" component={ChatRoomScreen}  options={{ headerShown: false}} />

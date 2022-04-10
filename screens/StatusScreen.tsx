@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, TextInput } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import Colors from '../constants/Colors';
@@ -31,7 +31,7 @@ export default function StatusScreen({ navigation }: RootTabScreenProps<'Chats'>
           showsHorizontalScrollIndicator={false}
           nestedScrollEnabled
         >
-           {!titleShown?  <Text style = {[styles.title]}>Status</Text>: null}
+           {!titleShown &&  <Text style = {[styles.title]}>Status</Text>}
             <SearchBar search = {onSearch} style = {{backgroundColor: Colors[colorScheme].backgroundOpac}} />
             <StatusProfile />
         </ScrollView>

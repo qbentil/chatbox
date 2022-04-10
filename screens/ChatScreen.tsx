@@ -32,7 +32,7 @@ export default function ChatScreen({ navigation }: RootTabScreenProps<'Chats'>) 
           showsHorizontalScrollIndicator={false}
           nestedScrollEnabled
         >
-           {!titleShown?  <Text style = {[styles.title]}>WA Business</Text>: null}
+           {!titleShown &&  <Text style = {[styles.title]}>WA Business</Text>}
             <SearchBar search = {onSearch} style = {{backgroundColor: Colors[colorScheme].backgroundOpac}} />
             <ChatNavs />
             <ChatList />

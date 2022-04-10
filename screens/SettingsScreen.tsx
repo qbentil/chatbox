@@ -24,7 +24,7 @@ export default function SettingsScreen() {
           showsHorizontalScrollIndicator={false}
           nestedScrollEnabled
         >
-           {!titleShown?  <Text style = {[styles.title]}>Settings</Text>: null}
+           {!titleShown &&  <Text style = {[styles.title]}>Settings</Text>}
           {/* User Profile */}
           <Profile />
           <Seperator />

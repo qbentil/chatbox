@@ -11,6 +11,7 @@ import { user } from '../types'
 
 const ChatRoomScreen = () => {
     const route = useRoute();
+    // useRoute Hook is used to access the params passed through the useNavigateion hook
     const user:user = route.params as user;
     
     return(

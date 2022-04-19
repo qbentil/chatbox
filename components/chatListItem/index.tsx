@@ -20,6 +20,7 @@ const ChatListItem = (props: ChatListItemProp) => {
     const colorScheme = useColorScheme()
     const onClick = () => {
       navigation.navigate("ChatRoom", {
+        // How to pass Data to next screen during navigation
         id: chatRoom.id,
         name: user.name,
         imageUri: user.imageUri

@@ -13,7 +13,8 @@ const UserListItem = ({user}) => {
 
     const colorScheme = useColorScheme()
     const onClick = () => {
-      navigation.navigate("User", {
+      // console.log(user.id);
+      navigation.navigate("ChatRoom", {
         id: user.id,
         name: user.name,
         imageUri: user.imageUri

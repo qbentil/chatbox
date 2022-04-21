@@ -12,11 +12,11 @@ const Styles = StyleSheet.create({
     },
     incomingMsg: {
         backgroundColor: '#28282B',
-        marginRight: 50
+        marginRight: 60
     },
     outgoingMsg: {
         backgroundColor: '#075E54',
-        marginLeft: 50
+        marginLeft: 60
     }
 
 })

@@ -24,10 +24,9 @@ const ChatMessage = (props: chatMessageProps) => {
         <View style = {[Styles.container]}>
             <View style = {[
                 Styles.msgBox,
-                {backgroundColor: isMyMessage()? '#075E54': '#28282B'}
-                
+                isMyMessage()? Styles.outgoingMsg: Styles.incomingMsg
             ]}>
-                <Text>{message.user.name}</Text>
+                {!isMyMessage() && (<Text>{message.user.name}</Text>)}
                 <Text style = {tw``}>{message.content}</Text>
                 <Text style = {tw`text-[0.65rem] -p-1 absolute right-0 bottom-0 pt-2 mr-2 text-gray-500  transition-all duration-100 group-hover:inline-flex`}>{moment(message.createdAt).fromNow()}</Text>
             </View>

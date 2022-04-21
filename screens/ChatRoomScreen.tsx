@@ -17,7 +17,7 @@ const ChatRoomScreen = () => {
     
     return(
         <View>
-            <ChatRoomScreenHeader name = {user.name} avatar = {user.imageUri}/>
+            <ChatRoomScreenHeader user = {user}/>
             <FlatList 
                 data={ChatRoomData.messages}
                 renderItem = {({item}) => <ChatMessage message={item} /> }

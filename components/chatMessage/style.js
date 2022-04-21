@@ -6,10 +6,17 @@ const Styles = StyleSheet.create({
         
     },
     msgBox: {
-        marginRight: 50,
         borderRadius: 5,
         padding: 10,
         
+    },
+    incomingMsg: {
+        backgroundColor: '#28282B',
+        marginRight: 50
+    },
+    outgoingMsg: {
+        backgroundColor: '#075E54',
+        marginLeft: 50
     }
 
 })

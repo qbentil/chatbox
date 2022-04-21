@@ -16,7 +16,7 @@ const  ChatRoomScreenHeader = ({user}) => {
             <GoBack label = {11} style = {tw`mt-1`} />
             <Image  
               style = {[tw`ml-6`,styles.avatar]}
-              source = {{uri: user.avatar}}
+              source = {{uri: user.imageUri}}
             />
             <TouchableOpacity activeOpacity={.7} style = {tw`flex `}>
                 <Text style={[tw`font-semibold`, {fontSize: 17}]}>{user.name}</Text>

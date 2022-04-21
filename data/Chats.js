@@ -16,6 +16,7 @@ export default {
 		user: {
 			id: 'u1',
 			name: 'Vadim',
+			imageUri: ''
 		},
 	}, {
 		id: 'm2',
@@ -24,6 +25,7 @@ export default {
 		user: {
 			id: 'u2',
 			name: 'Lukas',
+			imageUri: ''
 		},
 	}, {
 		id: 'm3',
@@ -32,6 +34,7 @@ export default {
 		user: {
 			id: 'u2',
 			name: 'Lukas',
+			imageUri: ''
 		},
 	}, {
 		id: 'm4',
@@ -40,6 +43,7 @@ export default {
 		user: {
 			id: 'u1',
 			name: 'Vadim',
+			imageUri: ''
 		},
 	}, {
 		id: 'm5',
@@ -48,6 +52,7 @@ export default {
 		user: {
 			id: 'u1',
 			name: 'Vadim',
+			imageUri: ''
 		},
 	}, {
 		id: 'm6',
@@ -56,6 +61,7 @@ export default {
 		user: {
 			id: 'u2',
 			name: 'Lukas',
+			imageUri: ''
 		},
 	}, {
 		id: 'm7',
@@ -64,6 +70,7 @@ export default {
 		user: {
 			id: 'u1',
 			name: 'Vadim',
+			imageUri: ''
 		},
 	}]
 }

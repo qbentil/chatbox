@@ -6,6 +6,7 @@ import {Text, View} from '../components/Themed'
 import ChatMessage from '../components/chatMessage'
 import ChatRoomData from '../data/Chats'
 import ChatRoomScreenHeader from '../headers/ChatRoomScreenHeader'
+import { FlatList } from 'react-native-gesture-handler'
 import { useRoute } from '@react-navigation/native'
 import { user } from '../types'
 
@@ -16,10 +17,11 @@ const ChatRoomScreen = () => {
     
     return(
         <View>
-            <ChatRoomScreenHeader name = {user.name} avatar = {user.imageUri}/>
-            <ScrollView>
-                <ChatMessage message={ChatRoomData.messages[6]}  />
-            </ScrollView>
+            <ChatRoomScreenHeader user = {user}/>
+            <FlatList 
+                data={ChatRoomData.messages}
+                renderItem = {({item}) => <ChatMessage message={item} /> }
+            />
         </View>
     )
 }

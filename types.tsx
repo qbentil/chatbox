@@ -76,6 +76,7 @@ export type Message = {
   id: string;
   content: string;
   createdAt: string;
+  user: user;
 }
 
 export type Label = {

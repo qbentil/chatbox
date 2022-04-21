@@ -1,11 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
+import { LogBox } from 'react-native';
+import Navigation from './navigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
+import { StatusBar } from 'expo-status-bar';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
-import Navigation from './navigation';
 import { useEffect } from 'react';
-import { LogBox } from 'react-native';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -13,8 +12,12 @@ export default function App() {
   
   useEffect(() => {
     LogBox.ignoreLogs(["VirtualizedLists should never be nested"])
-  }, [])
-
+  }, []);
+  
+  LogBox.ignoreLogs([
+    "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
+  ]);
+  
   if (!isLoadingComplete) {
     return null;
   } else {

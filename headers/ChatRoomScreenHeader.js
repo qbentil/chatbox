@@ -7,7 +7,7 @@ import GoBack from '../components/GoBack';
 import tw from 'twrnc'
 import useColorScheme from '../hooks/useColorScheme';
 
-const  ChatRoomScreenHeader = (props) => {
+const  ChatRoomScreenHeader = ({user}) => {
     colorScheme = useColorScheme()
   return (
     <SafeAreaView style={[tw`border-b mb-2`, {borderBottomColor: Colors[colorScheme].backgroundOpac, borderBottomWidth: .3}]}>
@@ -16,10 +16,10 @@ const  ChatRoomScreenHeader = (props) => {
             <GoBack label = {11} style = {tw`mt-1`} />
             <Image  
               style = {[tw`ml-6`,styles.avatar]}
-              source = {{uri: props.avatar}}
+              source = {{uri: user.imageUri}}
             />
             <TouchableOpacity activeOpacity={.7} style = {tw`flex `}>
-                <Text style={[tw`font-semibold`, {fontSize: 17}]}>{props.name}</Text>
+                <Text style={[tw`font-semibold`, {fontSize: 17}]}>{user.name}</Text>
                 <Text style={[tw``, {color: Colors[colorScheme].tabIconDefault, fontSize: 13}]}>5 minutes ago</Text>
             </TouchableOpacity>
         </View>

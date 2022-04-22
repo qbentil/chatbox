@@ -9,7 +9,10 @@ export default {
     tint: tintColorLight,
     tabIconDefault: '#ccc',
     tabIconSelected: tintColorLight,
-    backgroundOpac: '#EEEEEE'
+    backgroundOpac: '#EEEEEE',
+    incomingMsgBg: '#fff',
+    outgoingMsgBg: '#dcf8c5'
+    
   },
   dark: {
     text: '#fff',
@@ -17,7 +20,9 @@ export default {
     tint: tintColorDark,
     tabIconDefault: '#ccc',
     tabIconSelected: tintColorDark,
-    backgroundOpac: '#2C3333'
+    backgroundOpac: '#2C3333',
+    incomingMsgBg: '#28282B',
+    outgoingMsgBg: '#075E54'
   },
   white:"#fff",
   black: "#000",

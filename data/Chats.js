@@ -65,7 +65,7 @@ export default {
 		},
 	}, {
 		id: 'm7',
-		content: 'Big Data is really interesting. Cannot wait to go through all the material.',
+		content: 'Big Data is really interesting. Cannot wait to go through all the material. Buh wait.... Since when have you been in this sh*t!🤣🤣',
 		createdAt: '2020-10-03T14:53:00.000Z',
 		user: {
 			id: 'u1',

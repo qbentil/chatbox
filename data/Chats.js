@@ -72,5 +72,23 @@ export default {
 			name: 'Vadim',
 			imageUri: ''
 		},
+	},{
+		id: 'm8',
+		content: 'Big Data is really interesting. Cannot wait to go through all the material. Buh wait.... Since when have you been in this sh*t!🤣🤣',
+		createdAt: '2020-10-03T14:53:00.000Z',
+		user: {
+			id: 'u2',
+			name: 'Vadim',
+			imageUri: ''
+		},
+	},{
+		id: 'm9',
+		content: 'Big Data is really interesting. Cannot wait to go through all the material. Buh wait.... Since when have you been in this sh*t!🤣🤣',
+		createdAt: '2020-10-03T14:53:00.000Z',
+		user: {
+			id: 'u1',
+			name: 'Vadim',
+			imageUri: ''
+		},
 	}]
 }

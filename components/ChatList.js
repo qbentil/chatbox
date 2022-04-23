@@ -8,9 +8,9 @@ const ChatList = () => {
     return (
 
         <FlatList 
-            scrollEnabled = {false}
-            data={SortedChatData}
+        data={SortedChatData}
             style={{width: "100%"}}
+            scrollEnabled = {false}
             keyExtractor = {(item) => item.id}
             renderItem = {({item}) => (
                <ChatListItem chatRoom = {item} /> 

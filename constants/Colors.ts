@@ -10,7 +10,7 @@ export default {
     tabIconDefault: '#ccc',
     tabIconSelected: tintColorLight,
     backgroundOpac: '#EEEEEE',
-    incomingMsgBg: '#fff',
+    incomingMsgBg: '#eee',
     outgoingMsgBg: '#dcf8c5'
     
   },

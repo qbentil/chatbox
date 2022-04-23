@@ -33,7 +33,7 @@ const ChatMessage = (props: chatMessageProps) => {
                 }
             ]}>
                 {!isMyMessage() && (<Text style = {tw`text-[#25D366] font-semibold text-sm mb-2`}>{message.user.name}</Text>)}
-                <Text style = {tw`text-[1rem]`}>{message.content}</Text>
+                <Text style = {tw`text-[1rem mr-2 mb-2]`}>{message.content}</Text>
                 <Text style = {tw`text-[0.9rem] -p-1 absolute right-0 bottom-0 pt-2 mr-2 mb-1 text-gray-400`}>{moment(message.createdAt).fromNow()}</Text>
             </View>
         </View>

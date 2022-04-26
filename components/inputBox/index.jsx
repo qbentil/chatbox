@@ -21,8 +21,8 @@ export default function InputBox() {
               multiline
               numberOfLines={4}
               onChangeText={(text) => console.log(text)}
-              returnKeyType= {"send"}
-              style={tw`p-2 border-2 border-gray-400 w-70 h-100 rounded-2xl`}
+              returnKeyType= {"return"}
+              style={tw`p-2 border-2 border-gray-900 w-70 min-h-10 text-[#eee] max-h-30 rounded-2xl`}
             />
           </View>
           <View style = {tw`flex flex-row justify-between w-[40px]`}>

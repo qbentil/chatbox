@@ -7,6 +7,7 @@ import ChatRoomData from '../data/Chats'
 import ChatRoomScreenHeader from '../headers/ChatRoomScreenHeader'
 import { FlatList } from 'react-native-gesture-handler'
 import { ImageBackground } from 'react-native'
+import InputBox from '../components/inputBox'
 import tw from 'twrnc'
 import { useRoute } from '@react-navigation/native'
 import { user } from '../types'
@@ -38,6 +39,8 @@ const ChatRoomScreen = () => {
                     keyExtractor = {(item) => item.id}
                     renderItem = {({item}) => <ChatMessage message={item} /> }
                 />
+                {/* Chat Box */}
+                <InputBox />
         </View>
     )
 }

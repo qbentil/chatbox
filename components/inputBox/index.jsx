@@ -12,7 +12,7 @@ export default function InputBox() {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <TouchableNativeFeedback onPress={Keyboard.dismiss} >
-        <View style = {tw`flex flex-row justify-between px-5 py-3 w-100 items-center`}>
+        <View style = {tw`flex flex-row justify-between px-5 py-3 w-100 items-end`}>
           <View style={{}}>
             <Feather name="plus" size={24} color={Colors.light.tint} />
           </View>

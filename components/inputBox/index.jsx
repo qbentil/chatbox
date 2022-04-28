@@ -28,7 +28,11 @@ export default function InputBox() {
               onChangeText={(text) => setChatMsg(formatMsg(text))}
               placeholder = 'Message'
               placeholderTextColor = {Colors[colorScheme].backgroundOpac}
-              returnKeyType= {"ok"}
+              returnKeyType= {"next"}
+              returnKeyLabel = {"return"}
+              spellCheck
+              enablesReturnKeyAutomatically
+              keyboardType='ascii-capable'
               style={tw`p-2 border border-[${Colors[colorScheme].backgroundOpac}] w-full min-h-8 text-[#eee] max-h-30 rounded-2xl `}
             />
           </View>

@@ -12,9 +12,9 @@ ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
     <img src = "https://user-images.githubusercontent.com/55560024/157483389-3363dabb-1522-4127-9088-d74f014a813b.jpg"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/161615755-9ee8523a-be3d-4f86-85b0-43fa2ea95250.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/162210001-0d382966-6891-4064-b73e-d0841aeffbc1.png"  style = "width: 150px"/>
-    <img src = "https://user-images.githubusercontent.com/55560024/165924956-94010e9d-8aac-4ee2-b995-128d30466f6f.png"  style = "width: 150px"/>
-    <img src = "https://user-images.githubusercontent.com/55560024/165925043-fb685b8a-fd0a-4aa7-9192-0e476d16266e.png"  style = "width: 150px"/>
-    <img src = "https://user-images.githubusercontent.com/55560024/165925151-c13f424b-4f46-4fa8-a7ea-23ff9f87dbbd.png"  style = "width: 150px"/>
+    <img src = "https://user-images.githubusercontent.com/55560024/165925774-5fabca7d-3866-414c-b2f1-70c65f9ebf95.png"  style = "width: 150px"/>
+    <img src = "https://user-images.githubusercontent.com/55560024/165925721-36146bef-a058-4757-98f1-67f2f14a7a4c.png"  style = "width: 150px"/>
+    <img src = "https://user-images.githubusercontent.com/55560024/165925654-4e3b18f1-278c-4d3d-be0e-ff1a04a3584e.png"  style = "width: 150px"/>
 
 
 
@@ -33,7 +33,9 @@ ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
     <img src = "https://user-images.githubusercontent.com/55560024/157483471-0efa5671-ce03-4c6f-8425-b7b2275fbdec.jpg"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/161680486-252a0dbd-e128-4456-a494-2df964449ea6.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/162210157-95267fcc-eff2-46bd-9477-f9fbfc95895a.png"  style = "width: 150px"/>
-
+    <img src = "https://user-images.githubusercontent.com/55560024/165925774-5fabca7d-3866-414c-b2f1-70c65f9ebf95.png"  style = "width: 150px"/>
+    <img src = "https://user-images.githubusercontent.com/55560024/165925721-36146bef-a058-4757-98f1-67f2f14a7a4c.png"  style = "width: 150px"/>
+    <img src = "https://user-images.githubusercontent.com/55560024/165925654-4e3b18f1-278c-4d3d-be0e-ff1a04a3584e.png"  style = "width: 150px"/>
 
 </div>
 

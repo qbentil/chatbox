@@ -24,7 +24,7 @@ export default function QRScreen({ navigation }: RootTabScreenProps<'QRScreen'>)
               <Text style={tw` text-gray-500 text-sm`}>WhatsApp Business Account</Text>
               <View style ={tw`p-4 bg-white rounded-lg mt-5`}>
                 <Image 
-                    source={{uri: "https://twilio-cms-prod.s3.amazonaws.com/images/sample_whatsapp_qr_code.width-800.png"}}
+                    source={{uri: "https://www.qbentil.com/assets/img/wb-scan.jpg"}}
                     style = {[tw`rounded-lg`,{width: 200, height: 200}]}                    
                   />
               </View>

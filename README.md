@@ -9,7 +9,7 @@ ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
     <img src = "https://user-images.githubusercontent.com/55560024/154983212-e00cab8c-c507-4bcc-92ad-b7445dec2390.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/155123224-a1c57bec-382d-4885-b2cf-d35550b84332.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/155857315-cd7ae776-d7ab-45b4-bcb3-7ae38e9c582f.png"  style = "width: 150px"/>
-    <img src = "https://user-images.githubusercontent.com/55560024/157483389-3363dabb-1522-4127-9088-d74f014a813b.jpg"  style = "width: 150px"/>
+    <img src = "https://user-images.githubusercontent.com/55560024/165930909-d9f5bd2c-db87-44c1-a9ea-2442f3c3489c.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/161615755-9ee8523a-be3d-4f86-85b0-43fa2ea95250.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/162210001-0d382966-6891-4064-b73e-d0841aeffbc1.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/165925774-5fabca7d-3866-414c-b2f1-70c65f9ebf95.png"  style = "width: 150px"/>
@@ -30,7 +30,7 @@ ChatBox is a WhatsApp Business Clone built with React Native &amp; Expo.
     <img src = "https://user-images.githubusercontent.com/55560024/154983366-dd9de087-8150-4384-a3fd-2fad4add2dce.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/155123151-708a8255-2f49-4c65-9c99-30d69ca89c15.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/155857352-1612dba3-2f53-40e4-ad66-bc44ad0ecf82.png"  style = "width: 150px"/>
-    <img src = "https://user-images.githubusercontent.com/55560024/157483471-0efa5671-ce03-4c6f-8425-b7b2275fbdec.jpg"  style = "width: 150px"/>
+    <img src = "https://user-images.githubusercontent.com/55560024/165930994-264123ac-0e9d-48ba-82b5-8bd37f947ff6.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/161680486-252a0dbd-e128-4456-a494-2df964449ea6.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/165926062-7cb71fc5-c664-4bc0-8441-be4365febc50.png"  style = "width: 150px"/>
     <img src = "https://user-images.githubusercontent.com/55560024/165925774-5fabca7d-3866-414c-b2f1-70c65f9ebf95.png"  style = "width: 150px"/>

@@ -39,7 +39,7 @@ const ChatRoomScreen = () => {
                     keyExtractor = {(item) => item.id}
                     renderItem = {({item}) => <ChatMessage message={item} /> }
                 />
-                {/* Chat Box */}
+                {/* Input Box */}
                 <InputBox />
         </View>
     )

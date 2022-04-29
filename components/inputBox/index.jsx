@@ -1,4 +1,4 @@
-import { Feather, Ionicons, MaterialIcons, SimpleLineIcons } from '@expo/vector-icons'
+import { Feather, Ionicons, MaterialCommunityIcons, MaterialIcons, SimpleLineIcons } from '@expo/vector-icons'
 import { Keyboard, KeyboardAvoidingView, Platform, TextInput, TouchableNativeFeedback, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { Text, View } from '../Themed'
@@ -35,6 +35,9 @@ export default function InputBox() {
               keyboardType='ascii-capable'
               style={tw`p-2 border border-[${Colors[colorScheme].backgroundOpac}] w-full min-h-8 text-[#eee] max-h-30 rounded-2xl `}
             />
+            <TouchableOpacity style={tw`absolute right-0 mr-2`}>
+              <MaterialCommunityIcons name="sticker-outline" size={24} style={tw`mt-[6px]`} color={Colors.light.tint} />
+            </TouchableOpacity>
           </View>
           { chatMsg.length <=0 ? (
           <View style = {tw`flex flex-row justify-between w-[40px] mb-1`}>

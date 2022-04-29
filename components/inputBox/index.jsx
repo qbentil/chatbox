@@ -33,7 +33,7 @@ export default function InputBox() {
               spellCheck
               enablesReturnKeyAutomatically
               keyboardType='ascii-capable'
-              style={tw`p-2 border border-[${Colors[colorScheme].backgroundOpac}] w-full min-h-8 text-[#eee] max-h-30 rounded-2xl `}
+              style={tw`p-2 border border-[${Colors[colorScheme].backgroundOpac}] w-full min-h-8 text-[${Colors[colorScheme].text}] max-h-30 rounded-2xl `}
             />
           </View>
           <TouchableOpacity activeOpacity={.7} style={tw`absolute right-${chatMsg.length <=0 ? '18':'10'} bottom-4 mr-1`}>
